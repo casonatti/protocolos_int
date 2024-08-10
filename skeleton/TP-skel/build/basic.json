@@ -436,7 +436,7 @@
           ],
           "source_info" : {
             "filename" : "basic.p4",
-            "line" : 117,
+            "line" : 119,
             "column" : 8,
             "source_fragment" : "mark_to_drop(standard_metadata)"
           }
@@ -462,7 +462,7 @@
           ],
           "source_info" : {
             "filename" : "basic.p4",
-            "line" : 121,
+            "line" : 123,
             "column" : 8,
             "source_fragment" : "hdr.int_pai.quantidade_filho = 0"
           }
@@ -477,24 +477,9 @@
           ],
           "source_info" : {
             "filename" : "basic.p4",
-            "line" : 122,
+            "line" : 124,
             "column" : 8,
             "source_fragment" : "hdr.int_pai.setValid()"
-          }
-        },
-        {
-          "op" : "remove_header",
-          "parameters" : [
-            {
-              "type" : "header",
-              "value" : "ipv4"
-            }
-          ],
-          "source_info" : {
-            "filename" : "basic.p4",
-            "line" : 123,
-            "column" : 8,
-            "source_fragment" : "hdr.ipv4.setInvalid()"
           }
         }
       ]
@@ -541,24 +526,9 @@
           ],
           "source_info" : {
             "filename" : "basic.p4",
-            "line" : 127,
+            "line" : 128,
             "column" : 8,
             "source_fragment" : "hdr.int_pai.quantidade_filho = hdr.int_pai.quantidade_filho + 1"
-          }
-        },
-        {
-          "op" : "remove_header",
-          "parameters" : [
-            {
-              "type" : "header",
-              "value" : "ipv4"
-            }
-          ],
-          "source_info" : {
-            "filename" : "basic.p4",
-            "line" : 134,
-            "column" : 8,
-            "source_fragment" : "hdr.ipv4.setInvalid()"
           }
         }
       ]
@@ -685,7 +655,7 @@
       "id" : 0,
       "source_info" : {
         "filename" : "basic.p4",
-        "line" : 113,
+        "line" : 115,
         "column" : 8,
         "source_fragment" : "MyIngress"
       },

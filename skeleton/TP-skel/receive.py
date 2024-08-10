@@ -3,17 +3,21 @@ import os
 import sys
 
 from scapy.all import (
+    Packet,
     TCP,
     FieldLenField,
     FieldListField,
+    BitField,
+    ByteField,
     IntField,
+    PacketListField,
     IPOption,
     ShortField,
     get_if_list,
     sniff
 )
+
 from scapy.layers.inet import _IPOption_HDR
-from int_header import INT
 
 
 def get_if():
@@ -41,13 +45,40 @@ def get_if():
 #                                    IntField("", 0),
 #                                    length_from=lambda pkt:pkt.count*4) ]
 
+class INT_Filho(Packet):
+    name = "INT Filho"
+    fields_desc = [  IntField("ID_Switch",0),
+                     BitField("Porta_Entrada",0, 9),
+                     BitField("Porta_Saida",0, 9),
+                     BitField("TimeStamp",0, 48),
+                     BitField("Padding",0, 6),
+                    ]
+
+class INT(Packet):
+    name = "INT packet"
+
+    fields_desc=[ IntField("Tamanho_Filho",0),
+                  IntField("Quantidade_Filhos", None),
+                  ByteField("next_header", 6),
+                  PacketListField("plist", None, INT_Filho, count_from= lambda pkt:pkt.Quantidade_Filhos)]
+
+
+# def handle_pkt(pkt):
+#     if INT in pkt or (TCP in pkt and pkt[TCP].dport == 1234):
+#         print("got a packet")
+#         pkt.show2()
+#     #    hexdump(pkt)
+#         sys.stdout.flush()
+#     pkt.show2()
+
 def handle_pkt(pkt):
-    if INT in pkt or (TCP in pkt and pkt[TCP].dport == 1234):
-        print("got a packet")
-        pkt.show2()
-    #    hexdump(pkt)
-        sys.stdout.flush()
-    pkt.show2()
+    
+    #if IP in pkt and pkt[IP].proto == 150:
+    if INT in pkt and pkt[INT].next_header!= 1:
+      print("got a packet")
+      pkt.show2()
+      
+    sys.stdout.flush()
 
 
 def main():

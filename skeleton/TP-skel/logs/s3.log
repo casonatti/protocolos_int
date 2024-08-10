@@ -1,1195 +1,668 @@
 Calling target program-options parser
-[22:59:26.779] [bmv2] [D] [thread 11050] Set default default entry for table 'MyIngress.int_pai_existe': NoAction - 
-[22:59:26.779] [bmv2] [D] [thread 11050] Set default default entry for table 'MyIngress.int_pai_nao_existe': NoAction - 
-[22:59:26.779] [bmv2] [D] [thread 11050] Set default default entry for table 'MyIngress.ipv4_lpm': MyIngress.drop - 
+[23:28:06.327] [bmv2] [D] [thread 3247] Set default default entry for table 'MyIngress.int_pai_existe': NoAction - 
+[23:28:06.328] [bmv2] [D] [thread 3247] Set default default entry for table 'MyIngress.int_pai_nao_existe': NoAction - 
+[23:28:06.328] [bmv2] [D] [thread 3247] Set default default entry for table 'MyIngress.ipv4_lpm': MyIngress.drop - 
 Adding interface s3-eth1 as port 1
-[22:59:26.779] [bmv2] [D] [thread 11050] Adding interface s3-eth1 as port 1
+[23:28:06.328] [bmv2] [D] [thread 3247] Adding interface s3-eth1 as port 1
 Adding interface s3-eth2 as port 2
-[22:59:26.816] [bmv2] [D] [thread 11050] Adding interface s3-eth2 as port 2
+[23:28:06.412] [bmv2] [D] [thread 3247] Adding interface s3-eth2 as port 2
 Adding interface s3-eth3 as port 3
-[22:59:26.860] [bmv2] [D] [thread 11050] Adding interface s3-eth3 as port 3
+[23:28:06.463] [bmv2] [D] [thread 3247] Adding interface s3-eth3 as port 3
 Server listening on 0.0.0.0:50053
-[22:59:27.026] [bmv2] [I] [thread 11050] Starting Thrift server on port 9092
-[22:59:27.026] [bmv2] [I] [thread 11050] Thrift server was started
-[22:59:27.145] [bmv2] [D] [thread 11062] [0.0] [cxt 0] Processing packet received on port 2
-[22:59:27.145] [bmv2] [D] [thread 11062] [0.0] [cxt 0] Parser 'parser': start
-[22:59:27.145] [bmv2] [D] [thread 11062] [0.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:27.145] [bmv2] [D] [thread 11062] [0.0] [cxt 0] Extracting header 'ethernet'
-[22:59:27.145] [bmv2] [D] [thread 11062] [0.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:27.145] [bmv2] [T] [thread 11062] [0.0] [cxt 0] Bytes parsed: 14
-[22:59:27.145] [bmv2] [D] [thread 11062] [0.0] [cxt 0] Parser 'parser': end
-[22:59:27.145] [bmv2] [D] [thread 11062] [0.0] [cxt 0] Pipeline 'ingress': start
-[22:59:27.145] [bmv2] [T] [thread 11062] [0.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:27.145] [bmv2] [T] [thread 11062] [0.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:27.145] [bmv2] [D] [thread 11062] [0.0] [cxt 0] Looking up key:
+[23:28:06.501] [bmv2] [I] [thread 3247] Starting Thrift server on port 9092
+[23:28:06.502] [bmv2] [I] [thread 3247] Thrift server was started
+[23:28:06.504] [bmv2] [D] [thread 3257] [0.0] [cxt 0] Processing packet received on port 2
+[23:28:06.504] [bmv2] [D] [thread 3257] [0.0] [cxt 0] Parser 'parser': start
+[23:28:06.505] [bmv2] [D] [thread 3257] [0.0] [cxt 0] Parser 'parser' entering state 'start'
+[23:28:06.505] [bmv2] [D] [thread 3257] [0.0] [cxt 0] Extracting header 'ethernet'
+[23:28:06.505] [bmv2] [D] [thread 3257] [0.0] [cxt 0] Parser state 'start': key is 86dd
+[23:28:06.506] [bmv2] [T] [thread 3257] [0.0] [cxt 0] Bytes parsed: 14
+[23:28:06.506] [bmv2] [D] [thread 3257] [0.0] [cxt 0] Parser 'parser': end
+[23:28:06.506] [bmv2] [D] [thread 3257] [0.0] [cxt 0] Pipeline 'ingress': start
+[23:28:06.506] [bmv2] [T] [thread 3257] [0.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
+[23:28:06.507] [bmv2] [T] [thread 3257] [0.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
+[23:28:06.507] [bmv2] [D] [thread 3257] [0.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:27.145] [bmv2] [D] [thread 11062] [0.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:27.145] [bmv2] [D] [thread 11062] [0.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.145] [bmv2] [T] [thread 11062] [0.0] [cxt 0] Action NoAction
-[22:59:27.145] [bmv2] [T] [thread 11062] [0.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:27.145] [bmv2] [D] [thread 11062] [0.0] [cxt 0] Looking up key:
+[23:28:06.507] [bmv2] [D] [thread 3257] [0.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
+[23:28:06.507] [bmv2] [D] [thread 3257] [0.0] [cxt 0] Action entry is NoAction - 
+[23:28:06.507] [bmv2] [T] [thread 3257] [0.0] [cxt 0] Action NoAction
+[23:28:06.507] [bmv2] [T] [thread 3257] [0.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
+[23:28:06.507] [bmv2] [D] [thread 3257] [0.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:27.145] [bmv2] [D] [thread 11062] [0.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:27.145] [bmv2] [D] [thread 11062] [0.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.145] [bmv2] [T] [thread 11062] [0.0] [cxt 0] Action NoAction
-[22:59:27.145] [bmv2] [T] [thread 11062] [0.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:27.145] [bmv2] [D] [thread 11062] [0.0] [cxt 0] Pipeline 'ingress': end
-[22:59:27.145] [bmv2] [D] [thread 11062] [0.0] [cxt 0] Egress port is 0
-[22:59:27.145] [bmv2] [D] [thread 11063] [0.0] [cxt 0] Pipeline 'egress': start
-[22:59:27.145] [bmv2] [D] [thread 11063] [0.0] [cxt 0] Pipeline 'egress': end
-[22:59:27.145] [bmv2] [D] [thread 11063] [0.0] [cxt 0] Deparser 'deparser': start
-[22:59:27.145] [bmv2] [T] [thread 11063] [0.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:27.145] [bmv2] [D] [thread 11063] [0.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:27.145] [bmv2] [D] [thread 11063] [0.0] [cxt 0] Deparser 'deparser': end
-[22:59:27.145] [bmv2] [D] [thread 11062] [1.0] [cxt 0] Processing packet received on port 2
-[22:59:27.145] [bmv2] [D] [thread 11062] [1.0] [cxt 0] Parser 'parser': start
-[22:59:27.145] [bmv2] [D] [thread 11062] [1.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:27.145] [bmv2] [D] [thread 11062] [1.0] [cxt 0] Extracting header 'ethernet'
-[22:59:27.145] [bmv2] [D] [thread 11062] [1.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:27.145] [bmv2] [T] [thread 11062] [1.0] [cxt 0] Bytes parsed: 14
-[22:59:27.145] [bmv2] [D] [thread 11062] [1.0] [cxt 0] Parser 'parser': end
-[22:59:27.145] [bmv2] [D] [thread 11062] [1.0] [cxt 0] Pipeline 'ingress': start
-[22:59:27.145] [bmv2] [T] [thread 11062] [1.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:27.145] [bmv2] [T] [thread 11062] [1.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:27.145] [bmv2] [D] [thread 11062] [1.0] [cxt 0] Looking up key:
+[23:28:06.508] [bmv2] [D] [thread 3257] [0.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
+[23:28:06.508] [bmv2] [D] [thread 3257] [0.0] [cxt 0] Action entry is NoAction - 
+[23:28:06.508] [bmv2] [T] [thread 3257] [0.0] [cxt 0] Action NoAction
+[23:28:06.508] [bmv2] [T] [thread 3257] [0.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
+[23:28:06.508] [bmv2] [D] [thread 3257] [0.0] [cxt 0] Pipeline 'ingress': end
+[23:28:06.508] [bmv2] [D] [thread 3257] [0.0] [cxt 0] Egress port is 0
+[23:28:06.508] [bmv2] [D] [thread 3258] [0.0] [cxt 0] Pipeline 'egress': start
+[23:28:06.508] [bmv2] [D] [thread 3258] [0.0] [cxt 0] Pipeline 'egress': end
+[23:28:06.508] [bmv2] [D] [thread 3258] [0.0] [cxt 0] Deparser 'deparser': start
+[23:28:06.509] [bmv2] [T] [thread 3258] [0.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[23:28:06.509] [bmv2] [D] [thread 3258] [0.0] [cxt 0] Deparsing header 'ethernet'
+[23:28:06.509] [bmv2] [D] [thread 3258] [0.0] [cxt 0] Deparser 'deparser': end
+[23:28:06.509] [bmv2] [D] [thread 3262] [0.0] [cxt 0] Transmitting packet of size 90 out of port 0
+[23:28:06.746] [bmv2] [D] [thread 3257] [1.0] [cxt 0] Processing packet received on port 1
+[23:28:06.746] [bmv2] [D] [thread 3257] [1.0] [cxt 0] Parser 'parser': start
+[23:28:06.747] [bmv2] [D] [thread 3257] [1.0] [cxt 0] Parser 'parser' entering state 'start'
+[23:28:06.747] [bmv2] [D] [thread 3257] [1.0] [cxt 0] Extracting header 'ethernet'
+[23:28:06.748] [bmv2] [D] [thread 3257] [1.0] [cxt 0] Parser state 'start': key is 86dd
+[23:28:06.748] [bmv2] [T] [thread 3257] [1.0] [cxt 0] Bytes parsed: 14
+[23:28:06.749] [bmv2] [D] [thread 3257] [1.0] [cxt 0] Parser 'parser': end
+[23:28:06.749] [bmv2] [D] [thread 3257] [1.0] [cxt 0] Pipeline 'ingress': start
+[23:28:06.750] [bmv2] [T] [thread 3257] [1.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
+[23:28:06.751] [bmv2] [T] [thread 3257] [1.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
+[23:28:06.751] [bmv2] [D] [thread 3257] [1.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:27.145] [bmv2] [D] [thread 11062] [1.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:27.145] [bmv2] [D] [thread 11062] [1.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.145] [bmv2] [T] [thread 11062] [1.0] [cxt 0] Action NoAction
-[22:59:27.145] [bmv2] [T] [thread 11062] [1.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:27.145] [bmv2] [D] [thread 11062] [1.0] [cxt 0] Looking up key:
+[23:28:06.752] [bmv2] [D] [thread 3257] [1.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
+[23:28:06.752] [bmv2] [D] [thread 3257] [1.0] [cxt 0] Action entry is NoAction - 
+[23:28:06.752] [bmv2] [T] [thread 3257] [1.0] [cxt 0] Action NoAction
+[23:28:06.753] [bmv2] [T] [thread 3257] [1.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
+[23:28:06.753] [bmv2] [D] [thread 3257] [1.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:27.145] [bmv2] [D] [thread 11062] [1.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:27.145] [bmv2] [D] [thread 11062] [1.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.145] [bmv2] [T] [thread 11062] [1.0] [cxt 0] Action NoAction
-[22:59:27.146] [bmv2] [T] [thread 11062] [1.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:27.146] [bmv2] [D] [thread 11062] [1.0] [cxt 0] Pipeline 'ingress': end
-[22:59:27.146] [bmv2] [D] [thread 11062] [1.0] [cxt 0] Egress port is 0
-[22:59:27.146] [bmv2] [D] [thread 11063] [1.0] [cxt 0] Pipeline 'egress': start
-[22:59:27.146] [bmv2] [D] [thread 11063] [1.0] [cxt 0] Pipeline 'egress': end
-[22:59:27.146] [bmv2] [D] [thread 11063] [1.0] [cxt 0] Deparser 'deparser': start
-[22:59:27.146] [bmv2] [T] [thread 11063] [1.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:27.146] [bmv2] [D] [thread 11063] [1.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:27.146] [bmv2] [D] [thread 11063] [1.0] [cxt 0] Deparser 'deparser': end
-[22:59:27.145] [bmv2] [D] [thread 11067] [0.0] [cxt 0] Transmitting packet of size 90 out of port 0
-[22:59:27.146] [bmv2] [D] [thread 11067] [1.0] [cxt 0] Transmitting packet of size 70 out of port 0
-[22:59:27.249] [bmv2] [D] [thread 11062] [2.0] [cxt 0] Processing packet received on port 3
-[22:59:27.249] [bmv2] [D] [thread 11062] [2.0] [cxt 0] Parser 'parser': start
-[22:59:27.249] [bmv2] [D] [thread 11062] [2.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:27.249] [bmv2] [D] [thread 11062] [2.0] [cxt 0] Extracting header 'ethernet'
-[22:59:27.249] [bmv2] [D] [thread 11062] [2.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:27.249] [bmv2] [T] [thread 11062] [2.0] [cxt 0] Bytes parsed: 14
-[22:59:27.249] [bmv2] [D] [thread 11062] [2.0] [cxt 0] Parser 'parser': end
-[22:59:27.250] [bmv2] [D] [thread 11062] [2.0] [cxt 0] Pipeline 'ingress': start
-[22:59:27.250] [bmv2] [T] [thread 11062] [2.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:27.250] [bmv2] [T] [thread 11062] [2.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:27.250] [bmv2] [D] [thread 11062] [2.0] [cxt 0] Looking up key:
+[23:28:06.754] [bmv2] [D] [thread 3257] [1.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
+[23:28:06.754] [bmv2] [D] [thread 3257] [1.0] [cxt 0] Action entry is NoAction - 
+[23:28:06.755] [bmv2] [T] [thread 3257] [1.0] [cxt 0] Action NoAction
+[23:28:06.755] [bmv2] [T] [thread 3257] [1.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
+[23:28:06.756] [bmv2] [D] [thread 3257] [1.0] [cxt 0] Pipeline 'ingress': end
+[23:28:06.756] [bmv2] [D] [thread 3257] [1.0] [cxt 0] Egress port is 0
+[23:28:06.757] [bmv2] [D] [thread 3258] [1.0] [cxt 0] Pipeline 'egress': start
+[23:28:06.757] [bmv2] [D] [thread 3258] [1.0] [cxt 0] Pipeline 'egress': end
+[23:28:06.758] [bmv2] [D] [thread 3258] [1.0] [cxt 0] Deparser 'deparser': start
+[23:28:06.758] [bmv2] [T] [thread 3258] [1.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[23:28:06.759] [bmv2] [D] [thread 3258] [1.0] [cxt 0] Deparsing header 'ethernet'
+[23:28:06.759] [bmv2] [D] [thread 3258] [1.0] [cxt 0] Deparser 'deparser': end
+[23:28:06.760] [bmv2] [D] [thread 3262] [1.0] [cxt 0] Transmitting packet of size 90 out of port 0
+[23:28:06.897] [bmv2] [D] [thread 3257] [2.0] [cxt 0] Processing packet received on port 3
+[23:28:06.897] [bmv2] [D] [thread 3257] [2.0] [cxt 0] Parser 'parser': start
+[23:28:06.898] [bmv2] [D] [thread 3257] [2.0] [cxt 0] Parser 'parser' entering state 'start'
+[23:28:06.898] [bmv2] [D] [thread 3257] [2.0] [cxt 0] Extracting header 'ethernet'
+[23:28:06.898] [bmv2] [D] [thread 3257] [2.0] [cxt 0] Parser state 'start': key is 86dd
+[23:28:06.899] [bmv2] [T] [thread 3257] [2.0] [cxt 0] Bytes parsed: 14
+[23:28:06.899] [bmv2] [D] [thread 3257] [2.0] [cxt 0] Parser 'parser': end
+[23:28:06.899] [bmv2] [D] [thread 3257] [2.0] [cxt 0] Pipeline 'ingress': start
+[23:28:06.899] [bmv2] [T] [thread 3257] [2.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
+[23:28:06.899] [bmv2] [T] [thread 3257] [2.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
+[23:28:06.900] [bmv2] [D] [thread 3257] [2.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:27.250] [bmv2] [D] [thread 11062] [2.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:27.250] [bmv2] [D] [thread 11062] [2.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.250] [bmv2] [T] [thread 11062] [2.0] [cxt 0] Action NoAction
-[22:59:27.250] [bmv2] [T] [thread 11062] [2.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:27.250] [bmv2] [D] [thread 11062] [2.0] [cxt 0] Looking up key:
+[23:28:06.900] [bmv2] [D] [thread 3257] [2.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
+[23:28:06.900] [bmv2] [D] [thread 3257] [2.0] [cxt 0] Action entry is NoAction - 
+[23:28:06.900] [bmv2] [T] [thread 3257] [2.0] [cxt 0] Action NoAction
+[23:28:06.900] [bmv2] [T] [thread 3257] [2.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
+[23:28:06.900] [bmv2] [D] [thread 3257] [2.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:27.250] [bmv2] [D] [thread 11062] [2.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:27.250] [bmv2] [D] [thread 11062] [2.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.250] [bmv2] [T] [thread 11062] [2.0] [cxt 0] Action NoAction
-[22:59:27.250] [bmv2] [T] [thread 11062] [2.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:27.250] [bmv2] [D] [thread 11062] [2.0] [cxt 0] Pipeline 'ingress': end
-[22:59:27.250] [bmv2] [D] [thread 11062] [2.0] [cxt 0] Egress port is 0
-[22:59:27.250] [bmv2] [D] [thread 11062] [3.0] [cxt 0] Processing packet received on port 3
-[22:59:27.250] [bmv2] [D] [thread 11062] [3.0] [cxt 0] Parser 'parser': start
-[22:59:27.250] [bmv2] [D] [thread 11062] [3.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:27.250] [bmv2] [D] [thread 11062] [3.0] [cxt 0] Extracting header 'ethernet'
-[22:59:27.250] [bmv2] [D] [thread 11062] [3.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:27.250] [bmv2] [T] [thread 11062] [3.0] [cxt 0] Bytes parsed: 14
-[22:59:27.250] [bmv2] [D] [thread 11062] [3.0] [cxt 0] Parser 'parser': end
-[22:59:27.250] [bmv2] [D] [thread 11062] [3.0] [cxt 0] Pipeline 'ingress': start
-[22:59:27.250] [bmv2] [T] [thread 11062] [3.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:27.250] [bmv2] [T] [thread 11062] [3.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:27.250] [bmv2] [D] [thread 11062] [3.0] [cxt 0] Looking up key:
+[23:28:06.900] [bmv2] [D] [thread 3257] [2.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
+[23:28:06.900] [bmv2] [D] [thread 3257] [2.0] [cxt 0] Action entry is NoAction - 
+[23:28:06.900] [bmv2] [T] [thread 3257] [2.0] [cxt 0] Action NoAction
+[23:28:06.900] [bmv2] [T] [thread 3257] [2.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
+[23:28:06.900] [bmv2] [D] [thread 3257] [2.0] [cxt 0] Pipeline 'ingress': end
+[23:28:06.900] [bmv2] [D] [thread 3257] [2.0] [cxt 0] Egress port is 0
+[23:28:06.900] [bmv2] [D] [thread 3257] [3.0] [cxt 0] Processing packet received on port 3
+[23:28:06.901] [bmv2] [D] [thread 3257] [3.0] [cxt 0] Parser 'parser': start
+[23:28:06.901] [bmv2] [D] [thread 3257] [3.0] [cxt 0] Parser 'parser' entering state 'start'
+[23:28:06.901] [bmv2] [D] [thread 3257] [3.0] [cxt 0] Extracting header 'ethernet'
+[23:28:06.901] [bmv2] [D] [thread 3258] [2.0] [cxt 0] Pipeline 'egress': start
+[23:28:06.901] [bmv2] [D] [thread 3258] [2.0] [cxt 0] Pipeline 'egress': end
+[23:28:06.901] [bmv2] [D] [thread 3258] [2.0] [cxt 0] Deparser 'deparser': start
+[23:28:06.901] [bmv2] [T] [thread 3258] [2.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[23:28:06.901] [bmv2] [D] [thread 3257] [3.0] [cxt 0] Parser state 'start': key is 86dd
+[23:28:06.901] [bmv2] [T] [thread 3257] [3.0] [cxt 0] Bytes parsed: 14
+[23:28:06.901] [bmv2] [D] [thread 3257] [3.0] [cxt 0] Parser 'parser': end
+[23:28:06.901] [bmv2] [D] [thread 3257] [3.0] [cxt 0] Pipeline 'ingress': start
+[23:28:06.901] [bmv2] [T] [thread 3257] [3.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
+[23:28:06.901] [bmv2] [T] [thread 3257] [3.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
+[23:28:06.901] [bmv2] [D] [thread 3257] [3.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:27.250] [bmv2] [D] [thread 11062] [3.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:27.250] [bmv2] [D] [thread 11062] [3.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.250] [bmv2] [T] [thread 11062] [3.0] [cxt 0] Action NoAction
-[22:59:27.250] [bmv2] [T] [thread 11062] [3.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:27.250] [bmv2] [D] [thread 11062] [3.0] [cxt 0] Looking up key:
+[23:28:06.902] [bmv2] [D] [thread 3257] [3.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
+[23:28:06.902] [bmv2] [D] [thread 3257] [3.0] [cxt 0] Action entry is NoAction - 
+[23:28:06.902] [bmv2] [T] [thread 3257] [3.0] [cxt 0] Action NoAction
+[23:28:06.902] [bmv2] [T] [thread 3257] [3.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
+[23:28:06.902] [bmv2] [D] [thread 3257] [3.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:27.250] [bmv2] [D] [thread 11062] [3.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:27.250] [bmv2] [D] [thread 11062] [3.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.250] [bmv2] [T] [thread 11062] [3.0] [cxt 0] Action NoAction
-[22:59:27.250] [bmv2] [T] [thread 11062] [3.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:27.250] [bmv2] [D] [thread 11062] [3.0] [cxt 0] Pipeline 'ingress': end
-[22:59:27.250] [bmv2] [D] [thread 11062] [3.0] [cxt 0] Egress port is 0
-[22:59:27.250] [bmv2] [D] [thread 11063] [2.0] [cxt 0] Pipeline 'egress': start
-[22:59:27.250] [bmv2] [D] [thread 11063] [2.0] [cxt 0] Pipeline 'egress': end
-[22:59:27.250] [bmv2] [D] [thread 11063] [2.0] [cxt 0] Deparser 'deparser': start
-[22:59:27.250] [bmv2] [T] [thread 11063] [2.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:27.250] [bmv2] [D] [thread 11063] [2.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:27.250] [bmv2] [D] [thread 11063] [2.0] [cxt 0] Deparser 'deparser': end
-[22:59:27.250] [bmv2] [D] [thread 11063] [3.0] [cxt 0] Pipeline 'egress': start
-[22:59:27.250] [bmv2] [D] [thread 11063] [3.0] [cxt 0] Pipeline 'egress': end
-[22:59:27.250] [bmv2] [D] [thread 11063] [3.0] [cxt 0] Deparser 'deparser': start
-[22:59:27.250] [bmv2] [T] [thread 11063] [3.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:27.250] [bmv2] [D] [thread 11063] [3.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:27.250] [bmv2] [D] [thread 11063] [3.0] [cxt 0] Deparser 'deparser': end
-[22:59:27.250] [bmv2] [D] [thread 11067] [2.0] [cxt 0] Transmitting packet of size 90 out of port 0
-[22:59:27.251] [bmv2] [D] [thread 11067] [3.0] [cxt 0] Transmitting packet of size 70 out of port 0
-[22:59:27.272] [bmv2] [D] [thread 11062] [4.0] [cxt 0] Processing packet received on port 1
-[22:59:27.272] [bmv2] [D] [thread 11062] [4.0] [cxt 0] Parser 'parser': start
-[22:59:27.272] [bmv2] [D] [thread 11062] [4.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:27.272] [bmv2] [D] [thread 11062] [4.0] [cxt 0] Extracting header 'ethernet'
-[22:59:27.272] [bmv2] [D] [thread 11062] [4.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:27.272] [bmv2] [T] [thread 11062] [4.0] [cxt 0] Bytes parsed: 14
-[22:59:27.272] [bmv2] [D] [thread 11062] [4.0] [cxt 0] Parser 'parser': end
-[22:59:27.272] [bmv2] [D] [thread 11062] [4.0] [cxt 0] Pipeline 'ingress': start
-[22:59:27.272] [bmv2] [T] [thread 11062] [4.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:27.272] [bmv2] [T] [thread 11062] [4.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:27.272] [bmv2] [D] [thread 11062] [4.0] [cxt 0] Looking up key:
+[23:28:06.902] [bmv2] [D] [thread 3257] [3.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
+[23:28:06.902] [bmv2] [D] [thread 3257] [3.0] [cxt 0] Action entry is NoAction - 
+[23:28:06.902] [bmv2] [T] [thread 3257] [3.0] [cxt 0] Action NoAction
+[23:28:06.902] [bmv2] [T] [thread 3257] [3.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
+[23:28:06.902] [bmv2] [D] [thread 3257] [3.0] [cxt 0] Pipeline 'ingress': end
+[23:28:06.902] [bmv2] [D] [thread 3257] [3.0] [cxt 0] Egress port is 0
+[23:28:06.901] [bmv2] [D] [thread 3258] [2.0] [cxt 0] Deparsing header 'ethernet'
+[23:28:06.902] [bmv2] [D] [thread 3258] [2.0] [cxt 0] Deparser 'deparser': end
+[23:28:06.902] [bmv2] [D] [thread 3258] [3.0] [cxt 0] Pipeline 'egress': start
+[23:28:06.902] [bmv2] [D] [thread 3258] [3.0] [cxt 0] Pipeline 'egress': end
+[23:28:06.902] [bmv2] [D] [thread 3258] [3.0] [cxt 0] Deparser 'deparser': start
+[23:28:06.902] [bmv2] [T] [thread 3258] [3.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[23:28:06.902] [bmv2] [D] [thread 3258] [3.0] [cxt 0] Deparsing header 'ethernet'
+[23:28:06.902] [bmv2] [D] [thread 3258] [3.0] [cxt 0] Deparser 'deparser': end
+[23:28:06.902] [bmv2] [D] [thread 3262] [2.0] [cxt 0] Transmitting packet of size 90 out of port 0
+[23:28:06.903] [bmv2] [D] [thread 3262] [3.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[23:28:07.033] [bmv2] [D] [thread 3257] [4.0] [cxt 0] Processing packet received on port 3
+[23:28:07.033] [bmv2] [D] [thread 3257] [4.0] [cxt 0] Parser 'parser': start
+[23:28:07.033] [bmv2] [D] [thread 3257] [4.0] [cxt 0] Parser 'parser' entering state 'start'
+[23:28:07.034] [bmv2] [D] [thread 3257] [4.0] [cxt 0] Extracting header 'ethernet'
+[23:28:07.034] [bmv2] [D] [thread 3257] [4.0] [cxt 0] Parser state 'start': key is 86dd
+[23:28:07.034] [bmv2] [T] [thread 3257] [4.0] [cxt 0] Bytes parsed: 14
+[23:28:07.035] [bmv2] [D] [thread 3257] [4.0] [cxt 0] Parser 'parser': end
+[23:28:07.035] [bmv2] [D] [thread 3257] [4.0] [cxt 0] Pipeline 'ingress': start
+[23:28:07.035] [bmv2] [T] [thread 3257] [4.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
+[23:28:07.035] [bmv2] [T] [thread 3257] [4.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
+[23:28:07.035] [bmv2] [D] [thread 3257] [4.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:27.272] [bmv2] [D] [thread 11062] [4.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:27.272] [bmv2] [D] [thread 11062] [4.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.272] [bmv2] [T] [thread 11062] [4.0] [cxt 0] Action NoAction
-[22:59:27.272] [bmv2] [T] [thread 11062] [4.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:27.272] [bmv2] [D] [thread 11062] [4.0] [cxt 0] Looking up key:
+[23:28:07.036] [bmv2] [D] [thread 3257] [4.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
+[23:28:07.036] [bmv2] [D] [thread 3257] [4.0] [cxt 0] Action entry is NoAction - 
+[23:28:07.036] [bmv2] [T] [thread 3257] [4.0] [cxt 0] Action NoAction
+[23:28:07.036] [bmv2] [T] [thread 3257] [4.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
+[23:28:07.036] [bmv2] [D] [thread 3257] [4.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:27.272] [bmv2] [D] [thread 11062] [4.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:27.272] [bmv2] [D] [thread 11062] [4.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.272] [bmv2] [T] [thread 11062] [4.0] [cxt 0] Action NoAction
-[22:59:27.272] [bmv2] [T] [thread 11062] [4.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:27.272] [bmv2] [D] [thread 11062] [4.0] [cxt 0] Pipeline 'ingress': end
-[22:59:27.272] [bmv2] [D] [thread 11062] [4.0] [cxt 0] Egress port is 0
-[22:59:27.272] [bmv2] [D] [thread 11062] [5.0] [cxt 0] Processing packet received on port 1
-[22:59:27.272] [bmv2] [D] [thread 11062] [5.0] [cxt 0] Parser 'parser': start
-[22:59:27.272] [bmv2] [D] [thread 11062] [5.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:27.272] [bmv2] [D] [thread 11062] [5.0] [cxt 0] Extracting header 'ethernet'
-[22:59:27.272] [bmv2] [D] [thread 11062] [5.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:27.272] [bmv2] [T] [thread 11062] [5.0] [cxt 0] Bytes parsed: 14
-[22:59:27.272] [bmv2] [D] [thread 11062] [5.0] [cxt 0] Parser 'parser': end
-[22:59:27.272] [bmv2] [D] [thread 11062] [5.0] [cxt 0] Pipeline 'ingress': start
-[22:59:27.272] [bmv2] [T] [thread 11062] [5.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:27.272] [bmv2] [T] [thread 11062] [5.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:27.272] [bmv2] [D] [thread 11062] [5.0] [cxt 0] Looking up key:
+[23:28:07.036] [bmv2] [D] [thread 3257] [4.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
+[23:28:07.036] [bmv2] [D] [thread 3257] [4.0] [cxt 0] Action entry is NoAction - 
+[23:28:07.036] [bmv2] [T] [thread 3257] [4.0] [cxt 0] Action NoAction
+[23:28:07.037] [bmv2] [T] [thread 3257] [4.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
+[23:28:07.037] [bmv2] [D] [thread 3257] [4.0] [cxt 0] Pipeline 'ingress': end
+[23:28:07.037] [bmv2] [D] [thread 3257] [4.0] [cxt 0] Egress port is 0
+[23:28:07.037] [bmv2] [D] [thread 3257] [5.0] [cxt 0] Processing packet received on port 3
+[23:28:07.037] [bmv2] [D] [thread 3257] [5.0] [cxt 0] Parser 'parser': start
+[23:28:07.037] [bmv2] [D] [thread 3257] [5.0] [cxt 0] Parser 'parser' entering state 'start'
+[23:28:07.037] [bmv2] [D] [thread 3257] [5.0] [cxt 0] Extracting header 'ethernet'
+[23:28:07.038] [bmv2] [D] [thread 3257] [5.0] [cxt 0] Parser state 'start': key is 86dd
+[23:28:07.038] [bmv2] [T] [thread 3257] [5.0] [cxt 0] Bytes parsed: 14
+[23:28:07.037] [bmv2] [D] [thread 3258] [4.0] [cxt 0] Pipeline 'egress': start
+[23:28:07.038] [bmv2] [D] [thread 3258] [4.0] [cxt 0] Pipeline 'egress': end
+[23:28:07.038] [bmv2] [D] [thread 3258] [4.0] [cxt 0] Deparser 'deparser': start
+[23:28:07.038] [bmv2] [T] [thread 3258] [4.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[23:28:07.038] [bmv2] [D] [thread 3257] [5.0] [cxt 0] Parser 'parser': end
+[23:28:07.038] [bmv2] [D] [thread 3258] [4.0] [cxt 0] Deparsing header 'ethernet'
+[23:28:07.038] [bmv2] [D] [thread 3257] [5.0] [cxt 0] Pipeline 'ingress': start
+[23:28:07.038] [bmv2] [T] [thread 3257] [5.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
+[23:28:07.038] [bmv2] [T] [thread 3257] [5.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
+[23:28:07.039] [bmv2] [D] [thread 3257] [5.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:27.273] [bmv2] [D] [thread 11062] [5.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:27.273] [bmv2] [D] [thread 11062] [5.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.273] [bmv2] [T] [thread 11062] [5.0] [cxt 0] Action NoAction
-[22:59:27.273] [bmv2] [T] [thread 11062] [5.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:27.273] [bmv2] [D] [thread 11062] [5.0] [cxt 0] Looking up key:
+[23:28:07.039] [bmv2] [D] [thread 3257] [5.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
+[23:28:07.038] [bmv2] [D] [thread 3258] [4.0] [cxt 0] Deparser 'deparser': end
+[23:28:07.039] [bmv2] [D] [thread 3257] [5.0] [cxt 0] Action entry is NoAction - 
+[23:28:07.039] [bmv2] [T] [thread 3257] [5.0] [cxt 0] Action NoAction
+[23:28:07.039] [bmv2] [T] [thread 3257] [5.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
+[23:28:07.039] [bmv2] [D] [thread 3257] [5.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:27.273] [bmv2] [D] [thread 11062] [5.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:27.273] [bmv2] [D] [thread 11062] [5.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.273] [bmv2] [T] [thread 11062] [5.0] [cxt 0] Action NoAction
-[22:59:27.273] [bmv2] [T] [thread 11062] [5.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:27.273] [bmv2] [D] [thread 11062] [5.0] [cxt 0] Pipeline 'ingress': end
-[22:59:27.273] [bmv2] [D] [thread 11062] [5.0] [cxt 0] Egress port is 0
-[22:59:27.273] [bmv2] [D] [thread 11063] [4.0] [cxt 0] Pipeline 'egress': start
-[22:59:27.273] [bmv2] [D] [thread 11063] [4.0] [cxt 0] Pipeline 'egress': end
-[22:59:27.273] [bmv2] [D] [thread 11063] [4.0] [cxt 0] Deparser 'deparser': start
-[22:59:27.273] [bmv2] [T] [thread 11063] [4.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:27.273] [bmv2] [D] [thread 11063] [4.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:27.273] [bmv2] [D] [thread 11063] [4.0] [cxt 0] Deparser 'deparser': end
-[22:59:27.273] [bmv2] [D] [thread 11063] [5.0] [cxt 0] Pipeline 'egress': start
-[22:59:27.273] [bmv2] [D] [thread 11063] [5.0] [cxt 0] Pipeline 'egress': end
-[22:59:27.273] [bmv2] [D] [thread 11063] [5.0] [cxt 0] Deparser 'deparser': start
-[22:59:27.273] [bmv2] [T] [thread 11063] [5.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:27.273] [bmv2] [D] [thread 11063] [5.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:27.273] [bmv2] [D] [thread 11063] [5.0] [cxt 0] Deparser 'deparser': end
-[22:59:27.274] [bmv2] [D] [thread 11067] [4.0] [cxt 0] Transmitting packet of size 90 out of port 0
-[22:59:27.274] [bmv2] [D] [thread 11067] [5.0] [cxt 0] Transmitting packet of size 70 out of port 0
-[22:59:27.341] [bmv2] [D] [thread 11062] [6.0] [cxt 0] Processing packet received on port 3
-[22:59:27.342] [bmv2] [D] [thread 11062] [6.0] [cxt 0] Parser 'parser': start
-[22:59:27.342] [bmv2] [D] [thread 11062] [6.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:27.342] [bmv2] [D] [thread 11062] [6.0] [cxt 0] Extracting header 'ethernet'
-[22:59:27.342] [bmv2] [D] [thread 11062] [6.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:27.342] [bmv2] [T] [thread 11062] [6.0] [cxt 0] Bytes parsed: 14
-[22:59:27.342] [bmv2] [D] [thread 11062] [6.0] [cxt 0] Parser 'parser': end
-[22:59:27.342] [bmv2] [D] [thread 11062] [6.0] [cxt 0] Pipeline 'ingress': start
-[22:59:27.342] [bmv2] [T] [thread 11062] [6.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:27.342] [bmv2] [T] [thread 11062] [6.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:27.342] [bmv2] [D] [thread 11062] [6.0] [cxt 0] Looking up key:
+[23:28:07.039] [bmv2] [D] [thread 3257] [5.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
+[23:28:07.039] [bmv2] [D] [thread 3257] [5.0] [cxt 0] Action entry is NoAction - 
+[23:28:07.039] [bmv2] [D] [thread 3262] [4.0] [cxt 0] Transmitting packet of size 90 out of port 0
+[23:28:07.039] [bmv2] [T] [thread 3257] [5.0] [cxt 0] Action NoAction
+[23:28:07.039] [bmv2] [T] [thread 3257] [5.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
+[23:28:07.039] [bmv2] [D] [thread 3257] [5.0] [cxt 0] Pipeline 'ingress': end
+[23:28:07.039] [bmv2] [D] [thread 3257] [5.0] [cxt 0] Egress port is 0
+[23:28:07.040] [bmv2] [D] [thread 3258] [5.0] [cxt 0] Pipeline 'egress': start
+[23:28:07.040] [bmv2] [D] [thread 3258] [5.0] [cxt 0] Pipeline 'egress': end
+[23:28:07.040] [bmv2] [D] [thread 3258] [5.0] [cxt 0] Deparser 'deparser': start
+[23:28:07.040] [bmv2] [T] [thread 3258] [5.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[23:28:07.040] [bmv2] [D] [thread 3258] [5.0] [cxt 0] Deparsing header 'ethernet'
+[23:28:07.040] [bmv2] [D] [thread 3258] [5.0] [cxt 0] Deparser 'deparser': end
+[23:28:07.040] [bmv2] [D] [thread 3262] [5.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[23:28:07.141] [bmv2] [D] [thread 3257] [6.0] [cxt 0] Processing packet received on port 3
+[23:28:07.142] [bmv2] [D] [thread 3257] [6.0] [cxt 0] Parser 'parser': start
+[23:28:07.142] [bmv2] [D] [thread 3257] [6.0] [cxt 0] Parser 'parser' entering state 'start'
+[23:28:07.142] [bmv2] [D] [thread 3257] [6.0] [cxt 0] Extracting header 'ethernet'
+[23:28:07.143] [bmv2] [D] [thread 3257] [6.0] [cxt 0] Parser state 'start': key is 86dd
+[23:28:07.143] [bmv2] [T] [thread 3257] [6.0] [cxt 0] Bytes parsed: 14
+[23:28:07.143] [bmv2] [D] [thread 3257] [6.0] [cxt 0] Parser 'parser': end
+[23:28:07.144] [bmv2] [D] [thread 3257] [6.0] [cxt 0] Pipeline 'ingress': start
+[23:28:07.144] [bmv2] [T] [thread 3257] [6.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
+[23:28:07.144] [bmv2] [T] [thread 3257] [6.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
+[23:28:07.144] [bmv2] [D] [thread 3257] [6.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:27.342] [bmv2] [D] [thread 11062] [6.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:27.342] [bmv2] [D] [thread 11062] [6.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.342] [bmv2] [T] [thread 11062] [6.0] [cxt 0] Action NoAction
-[22:59:27.342] [bmv2] [T] [thread 11062] [6.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:27.342] [bmv2] [D] [thread 11062] [6.0] [cxt 0] Looking up key:
+[23:28:07.145] [bmv2] [D] [thread 3257] [6.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
+[23:28:07.145] [bmv2] [D] [thread 3257] [6.0] [cxt 0] Action entry is NoAction - 
+[23:28:07.145] [bmv2] [T] [thread 3257] [6.0] [cxt 0] Action NoAction
+[23:28:07.145] [bmv2] [T] [thread 3257] [6.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
+[23:28:07.145] [bmv2] [D] [thread 3257] [6.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:27.342] [bmv2] [D] [thread 11062] [6.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:27.342] [bmv2] [D] [thread 11062] [6.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.342] [bmv2] [T] [thread 11062] [6.0] [cxt 0] Action NoAction
-[22:59:27.342] [bmv2] [T] [thread 11062] [6.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:27.342] [bmv2] [D] [thread 11062] [6.0] [cxt 0] Pipeline 'ingress': end
-[22:59:27.342] [bmv2] [D] [thread 11062] [6.0] [cxt 0] Egress port is 0
-[22:59:27.342] [bmv2] [D] [thread 11062] [7.0] [cxt 0] Processing packet received on port 3
-[22:59:27.342] [bmv2] [D] [thread 11062] [7.0] [cxt 0] Parser 'parser': start
-[22:59:27.342] [bmv2] [D] [thread 11062] [7.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:27.342] [bmv2] [D] [thread 11062] [7.0] [cxt 0] Extracting header 'ethernet'
-[22:59:27.342] [bmv2] [D] [thread 11062] [7.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:27.342] [bmv2] [T] [thread 11062] [7.0] [cxt 0] Bytes parsed: 14
-[22:59:27.342] [bmv2] [D] [thread 11062] [7.0] [cxt 0] Parser 'parser': end
-[22:59:27.342] [bmv2] [D] [thread 11062] [7.0] [cxt 0] Pipeline 'ingress': start
-[22:59:27.342] [bmv2] [T] [thread 11062] [7.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:27.342] [bmv2] [T] [thread 11062] [7.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:27.342] [bmv2] [D] [thread 11062] [7.0] [cxt 0] Looking up key:
+[23:28:07.145] [bmv2] [D] [thread 3257] [6.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
+[23:28:07.145] [bmv2] [D] [thread 3257] [6.0] [cxt 0] Action entry is NoAction - 
+[23:28:07.145] [bmv2] [T] [thread 3257] [6.0] [cxt 0] Action NoAction
+[23:28:07.145] [bmv2] [T] [thread 3257] [6.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
+[23:28:07.145] [bmv2] [D] [thread 3257] [6.0] [cxt 0] Pipeline 'ingress': end
+[23:28:07.145] [bmv2] [D] [thread 3257] [6.0] [cxt 0] Egress port is 0
+[23:28:07.146] [bmv2] [D] [thread 3258] [6.0] [cxt 0] Pipeline 'egress': start
+[23:28:07.146] [bmv2] [D] [thread 3258] [6.0] [cxt 0] Pipeline 'egress': end
+[23:28:07.146] [bmv2] [D] [thread 3258] [6.0] [cxt 0] Deparser 'deparser': start
+[23:28:07.146] [bmv2] [T] [thread 3258] [6.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[23:28:07.146] [bmv2] [D] [thread 3258] [6.0] [cxt 0] Deparsing header 'ethernet'
+[23:28:07.146] [bmv2] [D] [thread 3258] [6.0] [cxt 0] Deparser 'deparser': end
+[23:28:07.146] [bmv2] [D] [thread 3262] [6.0] [cxt 0] Transmitting packet of size 90 out of port 0
+[23:28:07.245] [bmv2] [D] [thread 3257] [7.0] [cxt 0] Processing packet received on port 2
+[23:28:07.246] [bmv2] [D] [thread 3257] [7.0] [cxt 0] Parser 'parser': start
+[23:28:07.246] [bmv2] [D] [thread 3257] [7.0] [cxt 0] Parser 'parser' entering state 'start'
+[23:28:07.247] [bmv2] [D] [thread 3257] [7.0] [cxt 0] Extracting header 'ethernet'
+[23:28:07.247] [bmv2] [D] [thread 3257] [7.0] [cxt 0] Parser state 'start': key is 86dd
+[23:28:07.247] [bmv2] [T] [thread 3257] [7.0] [cxt 0] Bytes parsed: 14
+[23:28:07.247] [bmv2] [D] [thread 3257] [7.0] [cxt 0] Parser 'parser': end
+[23:28:07.248] [bmv2] [D] [thread 3257] [7.0] [cxt 0] Pipeline 'ingress': start
+[23:28:07.248] [bmv2] [T] [thread 3257] [7.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
+[23:28:07.248] [bmv2] [T] [thread 3257] [7.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
+[23:28:07.248] [bmv2] [D] [thread 3257] [7.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:27.342] [bmv2] [D] [thread 11062] [7.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:27.342] [bmv2] [D] [thread 11062] [7.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.342] [bmv2] [T] [thread 11062] [7.0] [cxt 0] Action NoAction
-[22:59:27.342] [bmv2] [T] [thread 11062] [7.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:27.342] [bmv2] [D] [thread 11062] [7.0] [cxt 0] Looking up key:
+[23:28:07.248] [bmv2] [D] [thread 3257] [7.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
+[23:28:07.249] [bmv2] [D] [thread 3257] [7.0] [cxt 0] Action entry is NoAction - 
+[23:28:07.249] [bmv2] [T] [thread 3257] [7.0] [cxt 0] Action NoAction
+[23:28:07.249] [bmv2] [T] [thread 3257] [7.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
+[23:28:07.249] [bmv2] [D] [thread 3257] [7.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:27.342] [bmv2] [D] [thread 11062] [7.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:27.342] [bmv2] [D] [thread 11062] [7.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.342] [bmv2] [T] [thread 11062] [7.0] [cxt 0] Action NoAction
-[22:59:27.342] [bmv2] [T] [thread 11062] [7.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:27.342] [bmv2] [D] [thread 11062] [7.0] [cxt 0] Pipeline 'ingress': end
-[22:59:27.342] [bmv2] [D] [thread 11062] [7.0] [cxt 0] Egress port is 0
-[22:59:27.342] [bmv2] [D] [thread 11063] [6.0] [cxt 0] Pipeline 'egress': start
-[22:59:27.342] [bmv2] [D] [thread 11063] [6.0] [cxt 0] Pipeline 'egress': end
-[22:59:27.342] [bmv2] [D] [thread 11063] [6.0] [cxt 0] Deparser 'deparser': start
-[22:59:27.342] [bmv2] [T] [thread 11063] [6.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:27.342] [bmv2] [D] [thread 11063] [6.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:27.343] [bmv2] [D] [thread 11063] [6.0] [cxt 0] Deparser 'deparser': end
-[22:59:27.343] [bmv2] [D] [thread 11063] [7.0] [cxt 0] Pipeline 'egress': start
-[22:59:27.343] [bmv2] [D] [thread 11063] [7.0] [cxt 0] Pipeline 'egress': end
-[22:59:27.343] [bmv2] [D] [thread 11063] [7.0] [cxt 0] Deparser 'deparser': start
-[22:59:27.343] [bmv2] [T] [thread 11063] [7.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:27.343] [bmv2] [D] [thread 11063] [7.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:27.343] [bmv2] [D] [thread 11063] [7.0] [cxt 0] Deparser 'deparser': end
-[22:59:27.343] [bmv2] [D] [thread 11067] [6.0] [cxt 0] Transmitting packet of size 90 out of port 0
-[22:59:27.343] [bmv2] [D] [thread 11067] [7.0] [cxt 0] Transmitting packet of size 70 out of port 0
-[22:59:27.370] [bmv2] [D] [thread 11062] [8.0] [cxt 0] Processing packet received on port 2
-[22:59:27.370] [bmv2] [D] [thread 11062] [8.0] [cxt 0] Parser 'parser': start
-[22:59:27.370] [bmv2] [D] [thread 11062] [8.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:27.370] [bmv2] [D] [thread 11062] [8.0] [cxt 0] Extracting header 'ethernet'
-[22:59:27.370] [bmv2] [D] [thread 11062] [8.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:27.370] [bmv2] [T] [thread 11062] [8.0] [cxt 0] Bytes parsed: 14
-[22:59:27.370] [bmv2] [D] [thread 11062] [8.0] [cxt 0] Parser 'parser': end
-[22:59:27.370] [bmv2] [D] [thread 11062] [8.0] [cxt 0] Pipeline 'ingress': start
-[22:59:27.370] [bmv2] [T] [thread 11062] [8.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:27.370] [bmv2] [T] [thread 11062] [8.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:27.370] [bmv2] [D] [thread 11062] [8.0] [cxt 0] Looking up key:
+[23:28:07.249] [bmv2] [D] [thread 3257] [7.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
+[23:28:07.249] [bmv2] [D] [thread 3257] [7.0] [cxt 0] Action entry is NoAction - 
+[23:28:07.249] [bmv2] [T] [thread 3257] [7.0] [cxt 0] Action NoAction
+[23:28:07.249] [bmv2] [T] [thread 3257] [7.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
+[23:28:07.250] [bmv2] [D] [thread 3257] [7.0] [cxt 0] Pipeline 'ingress': end
+[23:28:07.250] [bmv2] [D] [thread 3257] [7.0] [cxt 0] Egress port is 0
+[23:28:07.250] [bmv2] [D] [thread 3258] [7.0] [cxt 0] Pipeline 'egress': start
+[23:28:07.250] [bmv2] [D] [thread 3258] [7.0] [cxt 0] Pipeline 'egress': end
+[23:28:07.250] [bmv2] [D] [thread 3258] [7.0] [cxt 0] Deparser 'deparser': start
+[23:28:07.250] [bmv2] [T] [thread 3258] [7.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[23:28:07.250] [bmv2] [D] [thread 3258] [7.0] [cxt 0] Deparsing header 'ethernet'
+[23:28:07.250] [bmv2] [D] [thread 3258] [7.0] [cxt 0] Deparser 'deparser': end
+[23:28:07.250] [bmv2] [D] [thread 3262] [7.0] [cxt 0] Transmitting packet of size 90 out of port 0
+[23:28:07.512] [bmv2] [D] [thread 3257] [8.0] [cxt 0] Processing packet received on port 3
+[23:28:07.513] [bmv2] [D] [thread 3257] [8.0] [cxt 0] Parser 'parser': start
+[23:28:07.513] [bmv2] [D] [thread 3257] [8.0] [cxt 0] Parser 'parser' entering state 'start'
+[23:28:07.514] [bmv2] [D] [thread 3257] [8.0] [cxt 0] Extracting header 'ethernet'
+[23:28:07.514] [bmv2] [D] [thread 3257] [8.0] [cxt 0] Parser state 'start': key is 86dd
+[23:28:07.514] [bmv2] [T] [thread 3257] [8.0] [cxt 0] Bytes parsed: 14
+[23:28:07.515] [bmv2] [D] [thread 3257] [8.0] [cxt 0] Parser 'parser': end
+[23:28:07.515] [bmv2] [D] [thread 3257] [8.0] [cxt 0] Pipeline 'ingress': start
+[23:28:07.515] [bmv2] [T] [thread 3257] [8.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
+[23:28:07.515] [bmv2] [T] [thread 3257] [8.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
+[23:28:07.516] [bmv2] [D] [thread 3257] [8.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:27.370] [bmv2] [D] [thread 11062] [8.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:27.370] [bmv2] [D] [thread 11062] [8.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.370] [bmv2] [T] [thread 11062] [8.0] [cxt 0] Action NoAction
-[22:59:27.370] [bmv2] [T] [thread 11062] [8.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:27.370] [bmv2] [D] [thread 11062] [8.0] [cxt 0] Looking up key:
+[23:28:07.516] [bmv2] [D] [thread 3257] [8.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
+[23:28:07.516] [bmv2] [D] [thread 3257] [8.0] [cxt 0] Action entry is NoAction - 
+[23:28:07.516] [bmv2] [T] [thread 3257] [8.0] [cxt 0] Action NoAction
+[23:28:07.516] [bmv2] [T] [thread 3257] [8.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
+[23:28:07.516] [bmv2] [D] [thread 3257] [8.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:27.370] [bmv2] [D] [thread 11062] [8.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:27.370] [bmv2] [D] [thread 11062] [8.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.370] [bmv2] [T] [thread 11062] [8.0] [cxt 0] Action NoAction
-[22:59:27.370] [bmv2] [T] [thread 11062] [8.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:27.370] [bmv2] [D] [thread 11062] [8.0] [cxt 0] Pipeline 'ingress': end
-[22:59:27.370] [bmv2] [D] [thread 11062] [8.0] [cxt 0] Egress port is 0
-[22:59:27.370] [bmv2] [D] [thread 11062] [9.0] [cxt 0] Processing packet received on port 2
-[22:59:27.370] [bmv2] [D] [thread 11062] [9.0] [cxt 0] Parser 'parser': start
-[22:59:27.370] [bmv2] [D] [thread 11062] [9.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:27.370] [bmv2] [D] [thread 11062] [9.0] [cxt 0] Extracting header 'ethernet'
-[22:59:27.370] [bmv2] [D] [thread 11062] [9.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:27.370] [bmv2] [T] [thread 11062] [9.0] [cxt 0] Bytes parsed: 14
-[22:59:27.370] [bmv2] [D] [thread 11062] [9.0] [cxt 0] Parser 'parser': end
-[22:59:27.370] [bmv2] [D] [thread 11062] [9.0] [cxt 0] Pipeline 'ingress': start
-[22:59:27.370] [bmv2] [T] [thread 11062] [9.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:27.370] [bmv2] [T] [thread 11062] [9.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:27.370] [bmv2] [D] [thread 11062] [9.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[22:59:27.370] [bmv2] [D] [thread 11062] [9.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:27.370] [bmv2] [D] [thread 11062] [9.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.370] [bmv2] [T] [thread 11062] [9.0] [cxt 0] Action NoAction
-[22:59:27.370] [bmv2] [T] [thread 11062] [9.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:27.370] [bmv2] [D] [thread 11062] [9.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[22:59:27.370] [bmv2] [D] [thread 11062] [9.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:27.370] [bmv2] [D] [thread 11062] [9.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.370] [bmv2] [T] [thread 11062] [9.0] [cxt 0] Action NoAction
-[22:59:27.370] [bmv2] [D] [thread 11063] [8.0] [cxt 0] Pipeline 'egress': start
-[22:59:27.370] [bmv2] [D] [thread 11063] [8.0] [cxt 0] Pipeline 'egress': end
-[22:59:27.370] [bmv2] [D] [thread 11063] [8.0] [cxt 0] Deparser 'deparser': start
-[22:59:27.370] [bmv2] [T] [thread 11063] [8.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:27.371] [bmv2] [D] [thread 11063] [8.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:27.371] [bmv2] [D] [thread 11063] [8.0] [cxt 0] Deparser 'deparser': end
-[22:59:27.370] [bmv2] [T] [thread 11062] [9.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:27.371] [bmv2] [D] [thread 11062] [9.0] [cxt 0] Pipeline 'ingress': end
-[22:59:27.371] [bmv2] [D] [thread 11062] [9.0] [cxt 0] Egress port is 0
-[22:59:27.371] [bmv2] [D] [thread 11063] [9.0] [cxt 0] Pipeline 'egress': start
-[22:59:27.371] [bmv2] [D] [thread 11063] [9.0] [cxt 0] Pipeline 'egress': end
-[22:59:27.371] [bmv2] [D] [thread 11063] [9.0] [cxt 0] Deparser 'deparser': start
-[22:59:27.371] [bmv2] [T] [thread 11063] [9.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:27.371] [bmv2] [D] [thread 11063] [9.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:27.371] [bmv2] [D] [thread 11063] [9.0] [cxt 0] Deparser 'deparser': end
-[22:59:27.371] [bmv2] [D] [thread 11067] [8.0] [cxt 0] Transmitting packet of size 90 out of port 0
-[22:59:27.371] [bmv2] [D] [thread 11067] [9.0] [cxt 0] Transmitting packet of size 70 out of port 0
-[22:59:27.381] [bmv2] [D] [thread 11062] [10.0] [cxt 0] Processing packet received on port 2
-[22:59:27.381] [bmv2] [D] [thread 11062] [10.0] [cxt 0] Parser 'parser': start
-[22:59:27.381] [bmv2] [D] [thread 11062] [10.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:27.381] [bmv2] [D] [thread 11062] [10.0] [cxt 0] Extracting header 'ethernet'
-[22:59:27.381] [bmv2] [D] [thread 11062] [10.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:27.381] [bmv2] [T] [thread 11062] [10.0] [cxt 0] Bytes parsed: 14
-[22:59:27.381] [bmv2] [D] [thread 11062] [10.0] [cxt 0] Parser 'parser': end
-[22:59:27.381] [bmv2] [D] [thread 11062] [10.0] [cxt 0] Pipeline 'ingress': start
-[22:59:27.381] [bmv2] [T] [thread 11062] [10.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:27.381] [bmv2] [T] [thread 11062] [10.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:27.381] [bmv2] [D] [thread 11062] [10.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[22:59:27.381] [bmv2] [D] [thread 11062] [10.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:27.381] [bmv2] [D] [thread 11062] [10.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.381] [bmv2] [T] [thread 11062] [10.0] [cxt 0] Action NoAction
-[22:59:27.381] [bmv2] [T] [thread 11062] [10.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:27.381] [bmv2] [D] [thread 11062] [10.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[22:59:27.381] [bmv2] [D] [thread 11062] [10.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:27.381] [bmv2] [D] [thread 11062] [10.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.381] [bmv2] [T] [thread 11062] [10.0] [cxt 0] Action NoAction
-[22:59:27.381] [bmv2] [T] [thread 11062] [10.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:27.381] [bmv2] [D] [thread 11062] [10.0] [cxt 0] Pipeline 'ingress': end
-[22:59:27.381] [bmv2] [D] [thread 11062] [10.0] [cxt 0] Egress port is 0
-[22:59:27.381] [bmv2] [D] [thread 11063] [10.0] [cxt 0] Pipeline 'egress': start
-[22:59:27.381] [bmv2] [D] [thread 11063] [10.0] [cxt 0] Pipeline 'egress': end
-[22:59:27.381] [bmv2] [D] [thread 11063] [10.0] [cxt 0] Deparser 'deparser': start
-[22:59:27.381] [bmv2] [T] [thread 11063] [10.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:27.381] [bmv2] [D] [thread 11063] [10.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:27.381] [bmv2] [D] [thread 11063] [10.0] [cxt 0] Deparser 'deparser': end
-[22:59:27.381] [bmv2] [D] [thread 11067] [10.0] [cxt 0] Transmitting packet of size 90 out of port 0
-[22:59:27.537] [bmv2] [D] [thread 11062] [11.0] [cxt 0] Processing packet received on port 3
-[22:59:27.538] [bmv2] [D] [thread 11062] [11.0] [cxt 0] Parser 'parser': start
-[22:59:27.538] [bmv2] [D] [thread 11062] [11.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:27.538] [bmv2] [D] [thread 11062] [11.0] [cxt 0] Extracting header 'ethernet'
-[22:59:27.538] [bmv2] [D] [thread 11062] [11.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:27.538] [bmv2] [T] [thread 11062] [11.0] [cxt 0] Bytes parsed: 14
-[22:59:27.538] [bmv2] [D] [thread 11062] [11.0] [cxt 0] Parser 'parser': end
-[22:59:27.538] [bmv2] [D] [thread 11062] [11.0] [cxt 0] Pipeline 'ingress': start
-[22:59:27.538] [bmv2] [T] [thread 11062] [11.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:27.538] [bmv2] [T] [thread 11062] [11.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:27.538] [bmv2] [D] [thread 11062] [11.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[22:59:27.538] [bmv2] [D] [thread 11062] [11.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:27.538] [bmv2] [D] [thread 11062] [11.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.538] [bmv2] [T] [thread 11062] [11.0] [cxt 0] Action NoAction
-[22:59:27.538] [bmv2] [T] [thread 11062] [11.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:27.538] [bmv2] [D] [thread 11062] [11.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[22:59:27.538] [bmv2] [D] [thread 11062] [11.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:27.538] [bmv2] [D] [thread 11062] [11.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.538] [bmv2] [T] [thread 11062] [11.0] [cxt 0] Action NoAction
-[22:59:27.538] [bmv2] [T] [thread 11062] [11.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:27.538] [bmv2] [D] [thread 11062] [11.0] [cxt 0] Pipeline 'ingress': end
-[22:59:27.538] [bmv2] [D] [thread 11062] [11.0] [cxt 0] Egress port is 0
-[22:59:27.538] [bmv2] [D] [thread 11063] [11.0] [cxt 0] Pipeline 'egress': start
-[22:59:27.538] [bmv2] [D] [thread 11063] [11.0] [cxt 0] Pipeline 'egress': end
-[22:59:27.538] [bmv2] [D] [thread 11063] [11.0] [cxt 0] Deparser 'deparser': start
-[22:59:27.538] [bmv2] [T] [thread 11063] [11.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:27.538] [bmv2] [D] [thread 11063] [11.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:27.538] [bmv2] [D] [thread 11063] [11.0] [cxt 0] Deparser 'deparser': end
-[22:59:27.538] [bmv2] [D] [thread 11067] [11.0] [cxt 0] Transmitting packet of size 90 out of port 0
-[22:59:27.881] [bmv2] [D] [thread 11062] [12.0] [cxt 0] Processing packet received on port 2
-[22:59:27.881] [bmv2] [D] [thread 11062] [12.0] [cxt 0] Parser 'parser': start
-[22:59:27.881] [bmv2] [D] [thread 11062] [12.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:27.881] [bmv2] [D] [thread 11062] [12.0] [cxt 0] Extracting header 'ethernet'
-[22:59:27.881] [bmv2] [D] [thread 11062] [12.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:27.881] [bmv2] [T] [thread 11062] [12.0] [cxt 0] Bytes parsed: 14
-[22:59:27.881] [bmv2] [D] [thread 11062] [12.0] [cxt 0] Parser 'parser': end
-[22:59:27.881] [bmv2] [D] [thread 11062] [12.0] [cxt 0] Pipeline 'ingress': start
-[22:59:27.881] [bmv2] [T] [thread 11062] [12.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:27.881] [bmv2] [T] [thread 11062] [12.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:27.881] [bmv2] [D] [thread 11062] [12.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[22:59:27.881] [bmv2] [D] [thread 11062] [12.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:27.881] [bmv2] [D] [thread 11062] [12.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.881] [bmv2] [T] [thread 11062] [12.0] [cxt 0] Action NoAction
-[22:59:27.881] [bmv2] [T] [thread 11062] [12.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:27.881] [bmv2] [D] [thread 11062] [12.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[22:59:27.881] [bmv2] [D] [thread 11062] [12.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:27.881] [bmv2] [D] [thread 11062] [12.0] [cxt 0] Action entry is NoAction - 
-[22:59:27.881] [bmv2] [T] [thread 11062] [12.0] [cxt 0] Action NoAction
-[22:59:27.881] [bmv2] [T] [thread 11062] [12.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:27.881] [bmv2] [D] [thread 11062] [12.0] [cxt 0] Pipeline 'ingress': end
-[22:59:27.881] [bmv2] [D] [thread 11062] [12.0] [cxt 0] Egress port is 0
-[22:59:27.881] [bmv2] [D] [thread 11063] [12.0] [cxt 0] Pipeline 'egress': start
-[22:59:27.882] [bmv2] [D] [thread 11063] [12.0] [cxt 0] Pipeline 'egress': end
-[22:59:27.882] [bmv2] [D] [thread 11063] [12.0] [cxt 0] Deparser 'deparser': start
-[22:59:27.882] [bmv2] [T] [thread 11063] [12.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:27.882] [bmv2] [D] [thread 11063] [12.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:27.882] [bmv2] [D] [thread 11063] [12.0] [cxt 0] Deparser 'deparser': end
-[22:59:27.882] [bmv2] [D] [thread 11067] [12.0] [cxt 0] Transmitting packet of size 90 out of port 0
-[22:59:28.008] [bmv2] [D] [thread 11062] [13.0] [cxt 0] Processing packet received on port 1
-[22:59:28.008] [bmv2] [D] [thread 11062] [13.0] [cxt 0] Parser 'parser': start
-[22:59:28.008] [bmv2] [D] [thread 11062] [13.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:28.008] [bmv2] [D] [thread 11062] [13.0] [cxt 0] Extracting header 'ethernet'
-[22:59:28.008] [bmv2] [D] [thread 11062] [13.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:28.008] [bmv2] [T] [thread 11062] [13.0] [cxt 0] Bytes parsed: 14
-[22:59:28.008] [bmv2] [D] [thread 11062] [13.0] [cxt 0] Parser 'parser': end
-[22:59:28.008] [bmv2] [D] [thread 11062] [13.0] [cxt 0] Pipeline 'ingress': start
-[22:59:28.008] [bmv2] [T] [thread 11062] [13.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:28.008] [bmv2] [T] [thread 11062] [13.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:28.008] [bmv2] [D] [thread 11062] [13.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[22:59:28.008] [bmv2] [D] [thread 11062] [13.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:28.008] [bmv2] [D] [thread 11062] [13.0] [cxt 0] Action entry is NoAction - 
-[22:59:28.008] [bmv2] [T] [thread 11062] [13.0] [cxt 0] Action NoAction
-[22:59:28.008] [bmv2] [T] [thread 11062] [13.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:28.008] [bmv2] [D] [thread 11062] [13.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[22:59:28.008] [bmv2] [D] [thread 11062] [13.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:28.008] [bmv2] [D] [thread 11062] [13.0] [cxt 0] Action entry is NoAction - 
-[22:59:28.008] [bmv2] [T] [thread 11062] [13.0] [cxt 0] Action NoAction
-[22:59:28.008] [bmv2] [T] [thread 11062] [13.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:28.008] [bmv2] [D] [thread 11062] [13.0] [cxt 0] Pipeline 'ingress': end
-[22:59:28.008] [bmv2] [D] [thread 11062] [13.0] [cxt 0] Egress port is 0
-[22:59:28.009] [bmv2] [D] [thread 11063] [13.0] [cxt 0] Pipeline 'egress': start
-[22:59:28.009] [bmv2] [D] [thread 11063] [13.0] [cxt 0] Pipeline 'egress': end
-[22:59:28.009] [bmv2] [D] [thread 11063] [13.0] [cxt 0] Deparser 'deparser': start
-[22:59:28.009] [bmv2] [T] [thread 11063] [13.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:28.009] [bmv2] [D] [thread 11063] [13.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:28.009] [bmv2] [D] [thread 11063] [13.0] [cxt 0] Deparser 'deparser': end
-[22:59:28.009] [bmv2] [D] [thread 11067] [13.0] [cxt 0] Transmitting packet of size 90 out of port 0
-[22:59:28.265] [bmv2] [D] [thread 11062] [14.0] [cxt 0] Processing packet received on port 3
-[22:59:28.265] [bmv2] [D] [thread 11062] [14.0] [cxt 0] Parser 'parser': start
-[22:59:28.265] [bmv2] [D] [thread 11062] [14.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:28.265] [bmv2] [D] [thread 11062] [14.0] [cxt 0] Extracting header 'ethernet'
-[22:59:28.265] [bmv2] [D] [thread 11062] [14.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:28.265] [bmv2] [T] [thread 11062] [14.0] [cxt 0] Bytes parsed: 14
-[22:59:28.265] [bmv2] [D] [thread 11062] [14.0] [cxt 0] Parser 'parser': end
-[22:59:28.265] [bmv2] [D] [thread 11062] [14.0] [cxt 0] Pipeline 'ingress': start
-[22:59:28.265] [bmv2] [T] [thread 11062] [14.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:28.265] [bmv2] [T] [thread 11062] [14.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:28.265] [bmv2] [D] [thread 11062] [14.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[22:59:28.265] [bmv2] [D] [thread 11062] [14.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:28.265] [bmv2] [D] [thread 11062] [14.0] [cxt 0] Action entry is NoAction - 
-[22:59:28.265] [bmv2] [T] [thread 11062] [14.0] [cxt 0] Action NoAction
-[22:59:28.265] [bmv2] [T] [thread 11062] [14.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:28.265] [bmv2] [D] [thread 11062] [14.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[22:59:28.265] [bmv2] [D] [thread 11062] [14.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:28.265] [bmv2] [D] [thread 11062] [14.0] [cxt 0] Action entry is NoAction - 
-[22:59:28.265] [bmv2] [T] [thread 11062] [14.0] [cxt 0] Action NoAction
-[22:59:28.265] [bmv2] [T] [thread 11062] [14.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:28.265] [bmv2] [D] [thread 11062] [14.0] [cxt 0] Pipeline 'ingress': end
-[22:59:28.265] [bmv2] [D] [thread 11062] [14.0] [cxt 0] Egress port is 0
-[22:59:28.266] [bmv2] [D] [thread 11063] [14.0] [cxt 0] Pipeline 'egress': start
-[22:59:28.266] [bmv2] [D] [thread 11063] [14.0] [cxt 0] Pipeline 'egress': end
-[22:59:28.266] [bmv2] [D] [thread 11063] [14.0] [cxt 0] Deparser 'deparser': start
-[22:59:28.266] [bmv2] [T] [thread 11063] [14.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:28.266] [bmv2] [D] [thread 11063] [14.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:28.266] [bmv2] [D] [thread 11063] [14.0] [cxt 0] Deparser 'deparser': end
-[22:59:28.266] [bmv2] [D] [thread 11067] [14.0] [cxt 0] Transmitting packet of size 90 out of port 0
-[22:59:28.330] [bmv2] [W] [thread 11107] [P4Runtime] p4::tmp::P4DeviceConfig is deprecated
-[22:59:28.330] [bmv2] [D] [thread 11107] Set default default entry for table 'MyIngress.int_pai_existe': NoAction - 
-[22:59:28.330] [bmv2] [D] [thread 11107] Set default default entry for table 'MyIngress.int_pai_nao_existe': NoAction - 
-[22:59:28.330] [bmv2] [D] [thread 11107] Set default default entry for table 'MyIngress.ipv4_lpm': MyIngress.drop - 
-[22:59:28.331] [bmv2] [D] [thread 11107] simple_switch target has been notified of a config swap
-[22:59:28.331] [bmv2] [D] [thread 11108] Set default entry for table 'MyIngress.ipv4_lpm': MyIngress.drop - 
-[22:59:28.332] [bmv2] [D] [thread 11107] Entry 0 added to table 'MyIngress.ipv4_lpm'
-[22:59:28.332] [bmv2] [D] [thread 11107] Dumping entry 0
+[23:28:07.516] [bmv2] [D] [thread 3257] [8.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
+[23:28:07.516] [bmv2] [D] [thread 3257] [8.0] [cxt 0] Action entry is NoAction - 
+[23:28:07.516] [bmv2] [T] [thread 3257] [8.0] [cxt 0] Action NoAction
+[23:28:07.517] [bmv2] [T] [thread 3257] [8.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
+[23:28:07.517] [bmv2] [D] [thread 3257] [8.0] [cxt 0] Pipeline 'ingress': end
+[23:28:07.517] [bmv2] [D] [thread 3257] [8.0] [cxt 0] Egress port is 0
+[23:28:07.517] [bmv2] [D] [thread 3258] [8.0] [cxt 0] Pipeline 'egress': start
+[23:28:07.517] [bmv2] [D] [thread 3258] [8.0] [cxt 0] Pipeline 'egress': end
+[23:28:07.517] [bmv2] [D] [thread 3258] [8.0] [cxt 0] Deparser 'deparser': start
+[23:28:07.517] [bmv2] [T] [thread 3258] [8.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[23:28:07.517] [bmv2] [D] [thread 3258] [8.0] [cxt 0] Deparsing header 'ethernet'
+[23:28:07.517] [bmv2] [D] [thread 3258] [8.0] [cxt 0] Deparser 'deparser': end
+[23:28:07.518] [bmv2] [D] [thread 3262] [8.0] [cxt 0] Transmitting packet of size 90 out of port 0
+[23:28:07.924] [bmv2] [W] [thread 3291] [P4Runtime] p4::tmp::P4DeviceConfig is deprecated
+[23:28:07.924] [bmv2] [D] [thread 3291] Set default default entry for table 'MyIngress.int_pai_existe': NoAction - 
+[23:28:07.924] [bmv2] [D] [thread 3291] Set default default entry for table 'MyIngress.int_pai_nao_existe': NoAction - 
+[23:28:07.924] [bmv2] [D] [thread 3291] Set default default entry for table 'MyIngress.ipv4_lpm': MyIngress.drop - 
+[23:28:07.925] [bmv2] [D] [thread 3291] simple_switch target has been notified of a config swap
+[23:28:07.926] [bmv2] [D] [thread 3292] Set default entry for table 'MyIngress.ipv4_lpm': MyIngress.drop - 
+[23:28:07.926] [bmv2] [D] [thread 3291] Entry 0 added to table 'MyIngress.ipv4_lpm'
+[23:28:07.926] [bmv2] [D] [thread 3291] Dumping entry 0
 Match key:
 * hdr.ipv4.dstAddr    : LPM       0a000101/32
 Action entry: MyIngress.ipv4_forward - 80000000100,2,
 
-[22:59:28.332] [bmv2] [D] [thread 11108] Entry 1 added to table 'MyIngress.ipv4_lpm'
-[22:59:28.332] [bmv2] [D] [thread 11108] Dumping entry 1
+[23:28:07.927] [bmv2] [D] [thread 3292] Entry 1 added to table 'MyIngress.ipv4_lpm'
+[23:28:07.927] [bmv2] [D] [thread 3292] Dumping entry 1
 Match key:
 * hdr.ipv4.dstAddr    : LPM       0a000202/32
 Action entry: MyIngress.ipv4_forward - 80000000200,3,
 
-[22:59:28.333] [bmv2] [D] [thread 11107] Entry 2 added to table 'MyIngress.ipv4_lpm'
-[22:59:28.333] [bmv2] [D] [thread 11107] Dumping entry 2
+[23:28:07.928] [bmv2] [D] [thread 3291] Entry 2 added to table 'MyIngress.ipv4_lpm'
+[23:28:07.928] [bmv2] [D] [thread 3291] Dumping entry 2
 Match key:
 * hdr.ipv4.dstAddr    : LPM       0a000303/32
 Action entry: MyIngress.ipv4_forward - 80000000333,1,
 
-[22:59:31.277] [bmv2] [D] [thread 11062] [15.0] [cxt 0] Processing packet received on port 1
-[22:59:31.277] [bmv2] [D] [thread 11062] [15.0] [cxt 0] Parser 'parser': start
-[22:59:31.277] [bmv2] [D] [thread 11062] [15.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:31.277] [bmv2] [D] [thread 11062] [15.0] [cxt 0] Extracting header 'ethernet'
-[22:59:31.277] [bmv2] [D] [thread 11062] [15.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:31.277] [bmv2] [T] [thread 11062] [15.0] [cxt 0] Bytes parsed: 14
-[22:59:31.277] [bmv2] [D] [thread 11062] [15.0] [cxt 0] Parser 'parser': end
-[22:59:31.277] [bmv2] [D] [thread 11062] [15.0] [cxt 0] Pipeline 'ingress': start
-[22:59:31.277] [bmv2] [T] [thread 11062] [15.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:31.277] [bmv2] [T] [thread 11062] [15.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:31.277] [bmv2] [D] [thread 11062] [15.0] [cxt 0] Looking up key:
+[23:28:10.368] [bmv2] [D] [thread 3257] [9.0] [cxt 0] Processing packet received on port 2
+[23:28:10.368] [bmv2] [D] [thread 3257] [9.0] [cxt 0] Parser 'parser': start
+[23:28:10.369] [bmv2] [D] [thread 3257] [9.0] [cxt 0] Parser 'parser' entering state 'start'
+[23:28:10.369] [bmv2] [D] [thread 3257] [9.0] [cxt 0] Extracting header 'ethernet'
+[23:28:10.369] [bmv2] [D] [thread 3257] [9.0] [cxt 0] Parser state 'start': key is 86dd
+[23:28:10.369] [bmv2] [T] [thread 3257] [9.0] [cxt 0] Bytes parsed: 14
+[23:28:10.369] [bmv2] [D] [thread 3257] [9.0] [cxt 0] Parser 'parser': end
+[23:28:10.370] [bmv2] [D] [thread 3257] [9.0] [cxt 0] Pipeline 'ingress': start
+[23:28:10.370] [bmv2] [T] [thread 3257] [9.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
+[23:28:10.370] [bmv2] [T] [thread 3257] [9.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
+[23:28:10.370] [bmv2] [D] [thread 3257] [9.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:31.277] [bmv2] [D] [thread 11062] [15.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:31.277] [bmv2] [D] [thread 11062] [15.0] [cxt 0] Action entry is NoAction - 
-[22:59:31.277] [bmv2] [T] [thread 11062] [15.0] [cxt 0] Action NoAction
-[22:59:31.277] [bmv2] [T] [thread 11062] [15.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:31.277] [bmv2] [D] [thread 11062] [15.0] [cxt 0] Looking up key:
+[23:28:10.370] [bmv2] [D] [thread 3257] [9.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
+[23:28:10.370] [bmv2] [D] [thread 3257] [9.0] [cxt 0] Action entry is NoAction - 
+[23:28:10.370] [bmv2] [T] [thread 3257] [9.0] [cxt 0] Action NoAction
+[23:28:10.370] [bmv2] [T] [thread 3257] [9.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
+[23:28:10.370] [bmv2] [D] [thread 3257] [9.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:31.277] [bmv2] [D] [thread 11062] [15.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:31.277] [bmv2] [D] [thread 11062] [15.0] [cxt 0] Action entry is NoAction - 
-[22:59:31.277] [bmv2] [T] [thread 11062] [15.0] [cxt 0] Action NoAction
-[22:59:31.277] [bmv2] [T] [thread 11062] [15.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:31.277] [bmv2] [D] [thread 11062] [15.0] [cxt 0] Pipeline 'ingress': end
-[22:59:31.277] [bmv2] [D] [thread 11062] [15.0] [cxt 0] Egress port is 0
-[22:59:31.277] [bmv2] [D] [thread 11062] [16.0] [cxt 0] Processing packet received on port 2
-[22:59:31.277] [bmv2] [D] [thread 11062] [16.0] [cxt 0] Parser 'parser': start
-[22:59:31.277] [bmv2] [D] [thread 11062] [16.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:31.278] [bmv2] [D] [thread 11062] [16.0] [cxt 0] Extracting header 'ethernet'
-[22:59:31.278] [bmv2] [D] [thread 11062] [16.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:31.278] [bmv2] [T] [thread 11062] [16.0] [cxt 0] Bytes parsed: 14
-[22:59:31.278] [bmv2] [D] [thread 11062] [16.0] [cxt 0] Parser 'parser': end
-[22:59:31.278] [bmv2] [D] [thread 11062] [16.0] [cxt 0] Pipeline 'ingress': start
-[22:59:31.278] [bmv2] [T] [thread 11062] [16.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:31.278] [bmv2] [T] [thread 11062] [16.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:31.278] [bmv2] [D] [thread 11062] [16.0] [cxt 0] Looking up key:
+[23:28:10.370] [bmv2] [D] [thread 3257] [9.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
+[23:28:10.371] [bmv2] [D] [thread 3257] [9.0] [cxt 0] Action entry is NoAction - 
+[23:28:10.371] [bmv2] [T] [thread 3257] [9.0] [cxt 0] Action NoAction
+[23:28:10.371] [bmv2] [T] [thread 3257] [9.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
+[23:28:10.371] [bmv2] [D] [thread 3257] [9.0] [cxt 0] Pipeline 'ingress': end
+[23:28:10.371] [bmv2] [D] [thread 3257] [9.0] [cxt 0] Egress port is 0
+[23:28:10.371] [bmv2] [D] [thread 3258] [9.0] [cxt 0] Pipeline 'egress': start
+[23:28:10.371] [bmv2] [D] [thread 3258] [9.0] [cxt 0] Pipeline 'egress': end
+[23:28:10.371] [bmv2] [D] [thread 3258] [9.0] [cxt 0] Deparser 'deparser': start
+[23:28:10.371] [bmv2] [T] [thread 3258] [9.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[23:28:10.372] [bmv2] [D] [thread 3258] [9.0] [cxt 0] Deparsing header 'ethernet'
+[23:28:10.372] [bmv2] [D] [thread 3258] [9.0] [cxt 0] Deparser 'deparser': end
+[23:28:10.373] [bmv2] [D] [thread 3262] [9.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[23:28:10.617] [bmv2] [D] [thread 3257] [10.0] [cxt 0] Processing packet received on port 1
+[23:28:10.617] [bmv2] [D] [thread 3257] [10.0] [cxt 0] Parser 'parser': start
+[23:28:10.617] [bmv2] [D] [thread 3257] [10.0] [cxt 0] Parser 'parser' entering state 'start'
+[23:28:10.617] [bmv2] [D] [thread 3257] [10.0] [cxt 0] Extracting header 'ethernet'
+[23:28:10.618] [bmv2] [D] [thread 3257] [10.0] [cxt 0] Parser state 'start': key is 86dd
+[23:28:10.618] [bmv2] [T] [thread 3257] [10.0] [cxt 0] Bytes parsed: 14
+[23:28:10.618] [bmv2] [D] [thread 3257] [10.0] [cxt 0] Parser 'parser': end
+[23:28:10.618] [bmv2] [D] [thread 3257] [10.0] [cxt 0] Pipeline 'ingress': start
+[23:28:10.618] [bmv2] [T] [thread 3257] [10.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
+[23:28:10.618] [bmv2] [T] [thread 3257] [10.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
+[23:28:10.618] [bmv2] [D] [thread 3257] [10.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:31.278] [bmv2] [D] [thread 11062] [16.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:31.278] [bmv2] [D] [thread 11062] [16.0] [cxt 0] Action entry is NoAction - 
-[22:59:31.278] [bmv2] [T] [thread 11062] [16.0] [cxt 0] Action NoAction
-[22:59:31.278] [bmv2] [T] [thread 11062] [16.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:31.278] [bmv2] [D] [thread 11062] [16.0] [cxt 0] Looking up key:
+[23:28:10.618] [bmv2] [D] [thread 3257] [10.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
+[23:28:10.618] [bmv2] [D] [thread 3257] [10.0] [cxt 0] Action entry is NoAction - 
+[23:28:10.619] [bmv2] [T] [thread 3257] [10.0] [cxt 0] Action NoAction
+[23:28:10.619] [bmv2] [T] [thread 3257] [10.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
+[23:28:10.619] [bmv2] [D] [thread 3257] [10.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:31.278] [bmv2] [D] [thread 11062] [16.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:31.278] [bmv2] [D] [thread 11062] [16.0] [cxt 0] Action entry is NoAction - 
-[22:59:31.278] [bmv2] [T] [thread 11062] [16.0] [cxt 0] Action NoAction
-[22:59:31.278] [bmv2] [T] [thread 11062] [16.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:31.278] [bmv2] [D] [thread 11062] [16.0] [cxt 0] Pipeline 'ingress': end
-[22:59:31.278] [bmv2] [D] [thread 11062] [16.0] [cxt 0] Egress port is 0
-[22:59:31.278] [bmv2] [D] [thread 11062] [17.0] [cxt 0] Processing packet received on port 2
-[22:59:31.278] [bmv2] [D] [thread 11062] [17.0] [cxt 0] Parser 'parser': start
-[22:59:31.278] [bmv2] [D] [thread 11062] [17.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:31.278] [bmv2] [D] [thread 11062] [17.0] [cxt 0] Extracting header 'ethernet'
-[22:59:31.278] [bmv2] [D] [thread 11062] [17.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:31.278] [bmv2] [T] [thread 11062] [17.0] [cxt 0] Bytes parsed: 14
-[22:59:31.278] [bmv2] [D] [thread 11062] [17.0] [cxt 0] Parser 'parser': end
-[22:59:31.278] [bmv2] [D] [thread 11062] [17.0] [cxt 0] Pipeline 'ingress': start
-[22:59:31.278] [bmv2] [T] [thread 11062] [17.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:31.278] [bmv2] [T] [thread 11062] [17.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:31.278] [bmv2] [D] [thread 11063] [15.0] [cxt 0] Pipeline 'egress': start
-[22:59:31.278] [bmv2] [D] [thread 11063] [15.0] [cxt 0] Pipeline 'egress': end
-[22:59:31.278] [bmv2] [D] [thread 11063] [15.0] [cxt 0] Deparser 'deparser': start
-[22:59:31.278] [bmv2] [D] [thread 11062] [17.0] [cxt 0] Looking up key:
+[23:28:10.619] [bmv2] [D] [thread 3257] [10.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
+[23:28:10.619] [bmv2] [D] [thread 3257] [10.0] [cxt 0] Action entry is NoAction - 
+[23:28:10.619] [bmv2] [T] [thread 3257] [10.0] [cxt 0] Action NoAction
+[23:28:10.619] [bmv2] [T] [thread 3257] [10.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
+[23:28:10.619] [bmv2] [D] [thread 3257] [10.0] [cxt 0] Pipeline 'ingress': end
+[23:28:10.619] [bmv2] [D] [thread 3257] [10.0] [cxt 0] Egress port is 0
+[23:28:10.619] [bmv2] [D] [thread 3257] [11.0] [cxt 0] Processing packet received on port 2
+[23:28:10.619] [bmv2] [D] [thread 3257] [11.0] [cxt 0] Parser 'parser': start
+[23:28:10.620] [bmv2] [D] [thread 3257] [11.0] [cxt 0] Parser 'parser' entering state 'start'
+[23:28:10.620] [bmv2] [D] [thread 3257] [11.0] [cxt 0] Extracting header 'ethernet'
+[23:28:10.620] [bmv2] [D] [thread 3257] [11.0] [cxt 0] Parser state 'start': key is 86dd
+[23:28:10.620] [bmv2] [T] [thread 3257] [11.0] [cxt 0] Bytes parsed: 14
+[23:28:10.620] [bmv2] [D] [thread 3257] [11.0] [cxt 0] Parser 'parser': end
+[23:28:10.620] [bmv2] [D] [thread 3257] [11.0] [cxt 0] Pipeline 'ingress': start
+[23:28:10.620] [bmv2] [T] [thread 3257] [11.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
+[23:28:10.620] [bmv2] [T] [thread 3257] [11.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
+[23:28:10.620] [bmv2] [D] [thread 3257] [11.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:31.278] [bmv2] [D] [thread 11062] [17.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:31.278] [bmv2] [D] [thread 11062] [17.0] [cxt 0] Action entry is NoAction - 
-[22:59:31.278] [bmv2] [T] [thread 11062] [17.0] [cxt 0] Action NoAction
-[22:59:31.278] [bmv2] [T] [thread 11062] [17.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:31.278] [bmv2] [D] [thread 11062] [17.0] [cxt 0] Looking up key:
+[23:28:10.620] [bmv2] [D] [thread 3257] [11.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
+[23:28:10.620] [bmv2] [D] [thread 3257] [11.0] [cxt 0] Action entry is NoAction - 
+[23:28:10.621] [bmv2] [T] [thread 3257] [11.0] [cxt 0] Action NoAction
+[23:28:10.621] [bmv2] [T] [thread 3257] [11.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
+[23:28:10.621] [bmv2] [D] [thread 3257] [11.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:31.278] [bmv2] [D] [thread 11062] [17.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:31.278] [bmv2] [D] [thread 11062] [17.0] [cxt 0] Action entry is NoAction - 
-[22:59:31.278] [bmv2] [T] [thread 11063] [15.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:31.278] [bmv2] [D] [thread 11063] [15.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:31.278] [bmv2] [D] [thread 11063] [15.0] [cxt 0] Deparser 'deparser': end
-[22:59:31.278] [bmv2] [T] [thread 11062] [17.0] [cxt 0] Action NoAction
-[22:59:31.278] [bmv2] [T] [thread 11062] [17.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:31.278] [bmv2] [D] [thread 11062] [17.0] [cxt 0] Pipeline 'ingress': end
-[22:59:31.278] [bmv2] [D] [thread 11063] [16.0] [cxt 0] Pipeline 'egress': start
-[22:59:31.278] [bmv2] [D] [thread 11063] [16.0] [cxt 0] Pipeline 'egress': end
-[22:59:31.278] [bmv2] [D] [thread 11063] [16.0] [cxt 0] Deparser 'deparser': start
-[22:59:31.278] [bmv2] [T] [thread 11063] [16.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:31.278] [bmv2] [D] [thread 11063] [16.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:31.278] [bmv2] [D] [thread 11063] [16.0] [cxt 0] Deparser 'deparser': end
-[22:59:31.278] [bmv2] [D] [thread 11062] [17.0] [cxt 0] Egress port is 0
-[22:59:31.278] [bmv2] [D] [thread 11063] [17.0] [cxt 0] Pipeline 'egress': start
-[22:59:31.278] [bmv2] [D] [thread 11063] [17.0] [cxt 0] Pipeline 'egress': end
-[22:59:31.278] [bmv2] [D] [thread 11063] [17.0] [cxt 0] Deparser 'deparser': start
-[22:59:31.278] [bmv2] [T] [thread 11063] [17.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:31.278] [bmv2] [D] [thread 11063] [17.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:31.278] [bmv2] [D] [thread 11063] [17.0] [cxt 0] Deparser 'deparser': end
-[22:59:31.278] [bmv2] [D] [thread 11067] [15.0] [cxt 0] Transmitting packet of size 70 out of port 0
-[22:59:31.278] [bmv2] [D] [thread 11067] [16.0] [cxt 0] Transmitting packet of size 70 out of port 0
-[22:59:31.278] [bmv2] [D] [thread 11067] [17.0] [cxt 0] Transmitting packet of size 70 out of port 0
-[22:59:31.528] [bmv2] [D] [thread 11062] [18.0] [cxt 0] Processing packet received on port 3
-[22:59:31.528] [bmv2] [D] [thread 11062] [18.0] [cxt 0] Parser 'parser': start
-[22:59:31.528] [bmv2] [D] [thread 11062] [18.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:31.528] [bmv2] [D] [thread 11062] [18.0] [cxt 0] Extracting header 'ethernet'
-[22:59:31.528] [bmv2] [D] [thread 11062] [18.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:31.529] [bmv2] [T] [thread 11062] [18.0] [cxt 0] Bytes parsed: 14
-[22:59:31.529] [bmv2] [D] [thread 11062] [18.0] [cxt 0] Parser 'parser': end
-[22:59:31.529] [bmv2] [D] [thread 11062] [18.0] [cxt 0] Pipeline 'ingress': start
-[22:59:31.529] [bmv2] [T] [thread 11062] [18.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:31.529] [bmv2] [T] [thread 11062] [18.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:31.529] [bmv2] [D] [thread 11062] [18.0] [cxt 0] Looking up key:
+[23:28:10.621] [bmv2] [D] [thread 3257] [11.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
+[23:28:10.621] [bmv2] [D] [thread 3257] [11.0] [cxt 0] Action entry is NoAction - 
+[23:28:10.621] [bmv2] [T] [thread 3257] [11.0] [cxt 0] Action NoAction
+[23:28:10.621] [bmv2] [T] [thread 3257] [11.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
+[23:28:10.621] [bmv2] [D] [thread 3257] [11.0] [cxt 0] Pipeline 'ingress': end
+[23:28:10.621] [bmv2] [D] [thread 3257] [11.0] [cxt 0] Egress port is 0
+[23:28:10.620] [bmv2] [D] [thread 3258] [10.0] [cxt 0] Pipeline 'egress': start
+[23:28:10.621] [bmv2] [D] [thread 3258] [10.0] [cxt 0] Pipeline 'egress': end
+[23:28:10.621] [bmv2] [D] [thread 3258] [10.0] [cxt 0] Deparser 'deparser': start
+[23:28:10.621] [bmv2] [T] [thread 3258] [10.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[23:28:10.621] [bmv2] [D] [thread 3258] [10.0] [cxt 0] Deparsing header 'ethernet'
+[23:28:10.621] [bmv2] [D] [thread 3258] [10.0] [cxt 0] Deparser 'deparser': end
+[23:28:10.621] [bmv2] [D] [thread 3258] [11.0] [cxt 0] Pipeline 'egress': start
+[23:28:10.622] [bmv2] [D] [thread 3258] [11.0] [cxt 0] Pipeline 'egress': end
+[23:28:10.622] [bmv2] [D] [thread 3258] [11.0] [cxt 0] Deparser 'deparser': start
+[23:28:10.622] [bmv2] [T] [thread 3258] [11.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[23:28:10.622] [bmv2] [D] [thread 3258] [11.0] [cxt 0] Deparsing header 'ethernet'
+[23:28:10.622] [bmv2] [D] [thread 3258] [11.0] [cxt 0] Deparser 'deparser': end
+[23:28:10.621] [bmv2] [D] [thread 3262] [10.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[23:28:10.622] [bmv2] [D] [thread 3262] [11.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[23:28:10.871] [bmv2] [D] [thread 3257] [12.0] [cxt 0] Processing packet received on port 3
+[23:28:10.874] [bmv2] [D] [thread 3257] [12.0] [cxt 0] Parser 'parser': start
+[23:28:10.875] [bmv2] [D] [thread 3257] [12.0] [cxt 0] Parser 'parser' entering state 'start'
+[23:28:10.875] [bmv2] [D] [thread 3257] [12.0] [cxt 0] Extracting header 'ethernet'
+[23:28:10.875] [bmv2] [D] [thread 3257] [12.0] [cxt 0] Parser state 'start': key is 86dd
+[23:28:10.876] [bmv2] [T] [thread 3257] [12.0] [cxt 0] Bytes parsed: 14
+[23:28:10.876] [bmv2] [D] [thread 3257] [12.0] [cxt 0] Parser 'parser': end
+[23:28:10.877] [bmv2] [D] [thread 3257] [12.0] [cxt 0] Pipeline 'ingress': start
+[23:28:10.877] [bmv2] [T] [thread 3257] [12.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
+[23:28:10.877] [bmv2] [T] [thread 3257] [12.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
+[23:28:10.878] [bmv2] [D] [thread 3257] [12.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:31.529] [bmv2] [D] [thread 11062] [18.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:31.529] [bmv2] [D] [thread 11062] [18.0] [cxt 0] Action entry is NoAction - 
-[22:59:31.529] [bmv2] [T] [thread 11062] [18.0] [cxt 0] Action NoAction
-[22:59:31.529] [bmv2] [T] [thread 11062] [18.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:31.529] [bmv2] [D] [thread 11062] [18.0] [cxt 0] Looking up key:
+[23:28:10.878] [bmv2] [D] [thread 3257] [12.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
+[23:28:10.878] [bmv2] [D] [thread 3257] [12.0] [cxt 0] Action entry is NoAction - 
+[23:28:10.878] [bmv2] [T] [thread 3257] [12.0] [cxt 0] Action NoAction
+[23:28:10.879] [bmv2] [T] [thread 3257] [12.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
+[23:28:10.879] [bmv2] [D] [thread 3257] [12.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:31.529] [bmv2] [D] [thread 11062] [18.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:31.529] [bmv2] [D] [thread 11062] [18.0] [cxt 0] Action entry is NoAction - 
-[22:59:31.529] [bmv2] [T] [thread 11062] [18.0] [cxt 0] Action NoAction
-[22:59:31.529] [bmv2] [T] [thread 11062] [18.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:31.529] [bmv2] [D] [thread 11062] [18.0] [cxt 0] Pipeline 'ingress': end
-[22:59:31.529] [bmv2] [D] [thread 11062] [18.0] [cxt 0] Egress port is 0
-[22:59:31.529] [bmv2] [D] [thread 11063] [18.0] [cxt 0] Pipeline 'egress': start
-[22:59:31.529] [bmv2] [D] [thread 11063] [18.0] [cxt 0] Pipeline 'egress': end
-[22:59:31.529] [bmv2] [D] [thread 11063] [18.0] [cxt 0] Deparser 'deparser': start
-[22:59:31.529] [bmv2] [T] [thread 11063] [18.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:31.529] [bmv2] [D] [thread 11063] [18.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:31.529] [bmv2] [D] [thread 11063] [18.0] [cxt 0] Deparser 'deparser': end
-[22:59:31.529] [bmv2] [D] [thread 11067] [18.0] [cxt 0] Transmitting packet of size 70 out of port 0
-[22:59:31.785] [bmv2] [D] [thread 11062] [19.0] [cxt 0] Processing packet received on port 3
-[22:59:31.785] [bmv2] [D] [thread 11062] [19.0] [cxt 0] Parser 'parser': start
-[22:59:31.785] [bmv2] [D] [thread 11062] [19.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:31.785] [bmv2] [D] [thread 11062] [19.0] [cxt 0] Extracting header 'ethernet'
-[22:59:31.785] [bmv2] [D] [thread 11062] [19.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:31.785] [bmv2] [T] [thread 11062] [19.0] [cxt 0] Bytes parsed: 14
-[22:59:31.785] [bmv2] [D] [thread 11062] [19.0] [cxt 0] Parser 'parser': end
-[22:59:31.785] [bmv2] [D] [thread 11062] [19.0] [cxt 0] Pipeline 'ingress': start
-[22:59:31.785] [bmv2] [T] [thread 11062] [19.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:31.785] [bmv2] [T] [thread 11062] [19.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:31.785] [bmv2] [D] [thread 11062] [19.0] [cxt 0] Looking up key:
+[23:28:10.879] [bmv2] [D] [thread 3257] [12.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
+[23:28:10.880] [bmv2] [D] [thread 3257] [12.0] [cxt 0] Action entry is NoAction - 
+[23:28:10.880] [bmv2] [T] [thread 3257] [12.0] [cxt 0] Action NoAction
+[23:28:10.880] [bmv2] [T] [thread 3257] [12.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
+[23:28:10.880] [bmv2] [D] [thread 3257] [12.0] [cxt 0] Pipeline 'ingress': end
+[23:28:10.880] [bmv2] [D] [thread 3257] [12.0] [cxt 0] Egress port is 0
+[23:28:10.881] [bmv2] [D] [thread 3258] [12.0] [cxt 0] Pipeline 'egress': start
+[23:28:10.881] [bmv2] [D] [thread 3258] [12.0] [cxt 0] Pipeline 'egress': end
+[23:28:10.881] [bmv2] [D] [thread 3258] [12.0] [cxt 0] Deparser 'deparser': start
+[23:28:10.881] [bmv2] [T] [thread 3258] [12.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[23:28:10.881] [bmv2] [D] [thread 3258] [12.0] [cxt 0] Deparsing header 'ethernet'
+[23:28:10.881] [bmv2] [D] [thread 3258] [12.0] [cxt 0] Deparser 'deparser': end
+[23:28:10.881] [bmv2] [D] [thread 3262] [12.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[23:28:11.387] [bmv2] [D] [thread 3257] [13.0] [cxt 0] Processing packet received on port 3
+[23:28:11.388] [bmv2] [D] [thread 3257] [13.0] [cxt 0] Parser 'parser': start
+[23:28:11.388] [bmv2] [D] [thread 3257] [13.0] [cxt 0] Parser 'parser' entering state 'start'
+[23:28:11.388] [bmv2] [D] [thread 3257] [13.0] [cxt 0] Extracting header 'ethernet'
+[23:28:11.388] [bmv2] [D] [thread 3257] [13.0] [cxt 0] Parser state 'start': key is 86dd
+[23:28:11.389] [bmv2] [T] [thread 3257] [13.0] [cxt 0] Bytes parsed: 14
+[23:28:11.389] [bmv2] [D] [thread 3257] [13.0] [cxt 0] Parser 'parser': end
+[23:28:11.389] [bmv2] [D] [thread 3257] [13.0] [cxt 0] Pipeline 'ingress': start
+[23:28:11.389] [bmv2] [T] [thread 3257] [13.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
+[23:28:11.389] [bmv2] [T] [thread 3257] [13.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
+[23:28:11.389] [bmv2] [D] [thread 3257] [13.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:31.785] [bmv2] [D] [thread 11062] [19.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:31.785] [bmv2] [D] [thread 11062] [19.0] [cxt 0] Action entry is NoAction - 
-[22:59:31.785] [bmv2] [T] [thread 11062] [19.0] [cxt 0] Action NoAction
-[22:59:31.785] [bmv2] [T] [thread 11062] [19.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:31.785] [bmv2] [D] [thread 11062] [19.0] [cxt 0] Looking up key:
+[23:28:11.389] [bmv2] [D] [thread 3257] [13.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
+[23:28:11.390] [bmv2] [D] [thread 3257] [13.0] [cxt 0] Action entry is NoAction - 
+[23:28:11.390] [bmv2] [T] [thread 3257] [13.0] [cxt 0] Action NoAction
+[23:28:11.390] [bmv2] [T] [thread 3257] [13.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
+[23:28:11.390] [bmv2] [D] [thread 3257] [13.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:31.785] [bmv2] [D] [thread 11062] [19.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:31.785] [bmv2] [D] [thread 11062] [19.0] [cxt 0] Action entry is NoAction - 
-[22:59:31.785] [bmv2] [T] [thread 11062] [19.0] [cxt 0] Action NoAction
-[22:59:31.785] [bmv2] [T] [thread 11062] [19.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:31.785] [bmv2] [D] [thread 11062] [19.0] [cxt 0] Pipeline 'ingress': end
-[22:59:31.785] [bmv2] [D] [thread 11062] [19.0] [cxt 0] Egress port is 0
-[22:59:31.785] [bmv2] [D] [thread 11063] [19.0] [cxt 0] Pipeline 'egress': start
-[22:59:31.785] [bmv2] [D] [thread 11063] [19.0] [cxt 0] Pipeline 'egress': end
-[22:59:31.785] [bmv2] [D] [thread 11063] [19.0] [cxt 0] Deparser 'deparser': start
-[22:59:31.785] [bmv2] [T] [thread 11063] [19.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:31.786] [bmv2] [D] [thread 11063] [19.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:31.786] [bmv2] [D] [thread 11063] [19.0] [cxt 0] Deparser 'deparser': end
-[22:59:31.786] [bmv2] [D] [thread 11067] [19.0] [cxt 0] Transmitting packet of size 70 out of port 0
-[22:59:39.212] [bmv2] [D] [thread 11062] [20.0] [cxt 0] Processing packet received on port 2
-[22:59:39.212] [bmv2] [D] [thread 11062] [20.0] [cxt 0] Parser 'parser': start
-[22:59:39.212] [bmv2] [D] [thread 11062] [20.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:39.212] [bmv2] [D] [thread 11062] [20.0] [cxt 0] Extracting header 'ethernet'
-[22:59:39.212] [bmv2] [D] [thread 11062] [20.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:39.212] [bmv2] [T] [thread 11062] [20.0] [cxt 0] Bytes parsed: 14
-[22:59:39.212] [bmv2] [D] [thread 11062] [20.0] [cxt 0] Parser 'parser': end
-[22:59:39.212] [bmv2] [D] [thread 11062] [20.0] [cxt 0] Pipeline 'ingress': start
-[22:59:39.212] [bmv2] [T] [thread 11062] [20.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:39.212] [bmv2] [T] [thread 11062] [20.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:39.212] [bmv2] [D] [thread 11062] [20.0] [cxt 0] Looking up key:
+[23:28:11.390] [bmv2] [D] [thread 3257] [13.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
+[23:28:11.390] [bmv2] [D] [thread 3257] [13.0] [cxt 0] Action entry is NoAction - 
+[23:28:11.390] [bmv2] [T] [thread 3257] [13.0] [cxt 0] Action NoAction
+[23:28:11.390] [bmv2] [T] [thread 3257] [13.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
+[23:28:11.390] [bmv2] [D] [thread 3257] [13.0] [cxt 0] Pipeline 'ingress': end
+[23:28:11.390] [bmv2] [D] [thread 3257] [13.0] [cxt 0] Egress port is 0
+[23:28:11.391] [bmv2] [D] [thread 3258] [13.0] [cxt 0] Pipeline 'egress': start
+[23:28:11.391] [bmv2] [D] [thread 3258] [13.0] [cxt 0] Pipeline 'egress': end
+[23:28:11.391] [bmv2] [D] [thread 3258] [13.0] [cxt 0] Deparser 'deparser': start
+[23:28:11.391] [bmv2] [T] [thread 3258] [13.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[23:28:11.391] [bmv2] [D] [thread 3258] [13.0] [cxt 0] Deparsing header 'ethernet'
+[23:28:11.391] [bmv2] [D] [thread 3258] [13.0] [cxt 0] Deparser 'deparser': end
+[23:28:11.392] [bmv2] [D] [thread 3262] [13.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[23:28:18.040] [bmv2] [D] [thread 3257] [14.0] [cxt 0] Processing packet received on port 2
+[23:28:18.041] [bmv2] [D] [thread 3257] [14.0] [cxt 0] Parser 'parser': start
+[23:28:18.041] [bmv2] [D] [thread 3257] [14.0] [cxt 0] Parser 'parser' entering state 'start'
+[23:28:18.041] [bmv2] [D] [thread 3257] [14.0] [cxt 0] Extracting header 'ethernet'
+[23:28:18.041] [bmv2] [D] [thread 3257] [14.0] [cxt 0] Parser state 'start': key is 86dd
+[23:28:18.041] [bmv2] [T] [thread 3257] [14.0] [cxt 0] Bytes parsed: 14
+[23:28:18.041] [bmv2] [D] [thread 3257] [14.0] [cxt 0] Parser 'parser': end
+[23:28:18.041] [bmv2] [D] [thread 3257] [14.0] [cxt 0] Pipeline 'ingress': start
+[23:28:18.042] [bmv2] [T] [thread 3257] [14.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
+[23:28:18.042] [bmv2] [T] [thread 3257] [14.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
+[23:28:18.042] [bmv2] [D] [thread 3257] [14.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:39.212] [bmv2] [D] [thread 11062] [20.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:39.212] [bmv2] [D] [thread 11062] [20.0] [cxt 0] Action entry is NoAction - 
-[22:59:39.212] [bmv2] [T] [thread 11062] [20.0] [cxt 0] Action NoAction
-[22:59:39.212] [bmv2] [T] [thread 11062] [20.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:39.213] [bmv2] [D] [thread 11062] [20.0] [cxt 0] Looking up key:
+[23:28:18.042] [bmv2] [D] [thread 3257] [14.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
+[23:28:18.042] [bmv2] [D] [thread 3257] [14.0] [cxt 0] Action entry is NoAction - 
+[23:28:18.042] [bmv2] [T] [thread 3257] [14.0] [cxt 0] Action NoAction
+[23:28:18.042] [bmv2] [T] [thread 3257] [14.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
+[23:28:18.042] [bmv2] [D] [thread 3257] [14.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:39.213] [bmv2] [D] [thread 11062] [20.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:39.213] [bmv2] [D] [thread 11062] [20.0] [cxt 0] Action entry is NoAction - 
-[22:59:39.213] [bmv2] [T] [thread 11062] [20.0] [cxt 0] Action NoAction
-[22:59:39.213] [bmv2] [T] [thread 11062] [20.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:39.213] [bmv2] [D] [thread 11062] [20.0] [cxt 0] Pipeline 'ingress': end
-[22:59:39.213] [bmv2] [D] [thread 11062] [20.0] [cxt 0] Egress port is 0
-[22:59:39.213] [bmv2] [D] [thread 11062] [21.0] [cxt 0] Processing packet received on port 2
-[22:59:39.213] [bmv2] [D] [thread 11062] [21.0] [cxt 0] Parser 'parser': start
-[22:59:39.213] [bmv2] [D] [thread 11062] [21.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:39.213] [bmv2] [D] [thread 11062] [21.0] [cxt 0] Extracting header 'ethernet'
-[22:59:39.213] [bmv2] [D] [thread 11062] [21.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:39.213] [bmv2] [T] [thread 11062] [21.0] [cxt 0] Bytes parsed: 14
-[22:59:39.213] [bmv2] [D] [thread 11062] [21.0] [cxt 0] Parser 'parser': end
-[22:59:39.213] [bmv2] [D] [thread 11062] [21.0] [cxt 0] Pipeline 'ingress': start
-[22:59:39.213] [bmv2] [T] [thread 11062] [21.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:39.213] [bmv2] [T] [thread 11062] [21.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:39.213] [bmv2] [D] [thread 11062] [21.0] [cxt 0] Looking up key:
+[23:28:18.042] [bmv2] [D] [thread 3257] [14.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
+[23:28:18.042] [bmv2] [D] [thread 3257] [14.0] [cxt 0] Action entry is NoAction - 
+[23:28:18.042] [bmv2] [T] [thread 3257] [14.0] [cxt 0] Action NoAction
+[23:28:18.043] [bmv2] [T] [thread 3257] [14.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
+[23:28:18.043] [bmv2] [D] [thread 3257] [14.0] [cxt 0] Pipeline 'ingress': end
+[23:28:18.043] [bmv2] [D] [thread 3257] [14.0] [cxt 0] Egress port is 0
+[23:28:18.043] [bmv2] [D] [thread 3258] [14.0] [cxt 0] Pipeline 'egress': start
+[23:28:18.043] [bmv2] [D] [thread 3258] [14.0] [cxt 0] Pipeline 'egress': end
+[23:28:18.043] [bmv2] [D] [thread 3258] [14.0] [cxt 0] Deparser 'deparser': start
+[23:28:18.043] [bmv2] [T] [thread 3258] [14.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[23:28:18.044] [bmv2] [D] [thread 3258] [14.0] [cxt 0] Deparsing header 'ethernet'
+[23:28:18.044] [bmv2] [D] [thread 3258] [14.0] [cxt 0] Deparser 'deparser': end
+[23:28:18.044] [bmv2] [D] [thread 3262] [14.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[23:28:18.815] [bmv2] [D] [thread 3257] [15.0] [cxt 0] Processing packet received on port 3
+[23:28:18.816] [bmv2] [D] [thread 3257] [15.0] [cxt 0] Parser 'parser': start
+[23:28:18.816] [bmv2] [D] [thread 3257] [15.0] [cxt 0] Parser 'parser' entering state 'start'
+[23:28:18.816] [bmv2] [D] [thread 3257] [15.0] [cxt 0] Extracting header 'ethernet'
+[23:28:18.816] [bmv2] [D] [thread 3257] [15.0] [cxt 0] Parser state 'start': key is 86dd
+[23:28:18.817] [bmv2] [T] [thread 3257] [15.0] [cxt 0] Bytes parsed: 14
+[23:28:18.817] [bmv2] [D] [thread 3257] [15.0] [cxt 0] Parser 'parser': end
+[23:28:18.817] [bmv2] [D] [thread 3257] [15.0] [cxt 0] Pipeline 'ingress': start
+[23:28:18.817] [bmv2] [T] [thread 3257] [15.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
+[23:28:18.817] [bmv2] [T] [thread 3257] [15.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
+[23:28:18.817] [bmv2] [D] [thread 3257] [15.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:39.213] [bmv2] [D] [thread 11062] [21.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:39.213] [bmv2] [D] [thread 11062] [21.0] [cxt 0] Action entry is NoAction - 
-[22:59:39.213] [bmv2] [T] [thread 11062] [21.0] [cxt 0] Action NoAction
-[22:59:39.213] [bmv2] [T] [thread 11062] [21.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:39.213] [bmv2] [D] [thread 11062] [21.0] [cxt 0] Looking up key:
+[23:28:18.817] [bmv2] [D] [thread 3257] [15.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
+[23:28:18.818] [bmv2] [D] [thread 3257] [15.0] [cxt 0] Action entry is NoAction - 
+[23:28:18.818] [bmv2] [T] [thread 3257] [15.0] [cxt 0] Action NoAction
+[23:28:18.818] [bmv2] [T] [thread 3257] [15.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
+[23:28:18.818] [bmv2] [D] [thread 3257] [15.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:39.213] [bmv2] [D] [thread 11062] [21.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:39.213] [bmv2] [D] [thread 11062] [21.0] [cxt 0] Action entry is NoAction - 
-[22:59:39.213] [bmv2] [T] [thread 11062] [21.0] [cxt 0] Action NoAction
-[22:59:39.213] [bmv2] [T] [thread 11062] [21.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:39.213] [bmv2] [D] [thread 11062] [21.0] [cxt 0] Pipeline 'ingress': end
-[22:59:39.213] [bmv2] [D] [thread 11062] [21.0] [cxt 0] Egress port is 0
-[22:59:39.213] [bmv2] [D] [thread 11062] [22.0] [cxt 0] Processing packet received on port 1
-[22:59:39.213] [bmv2] [D] [thread 11062] [22.0] [cxt 0] Parser 'parser': start
-[22:59:39.213] [bmv2] [D] [thread 11062] [22.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:39.213] [bmv2] [D] [thread 11062] [22.0] [cxt 0] Extracting header 'ethernet'
-[22:59:39.213] [bmv2] [D] [thread 11062] [22.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:39.213] [bmv2] [T] [thread 11062] [22.0] [cxt 0] Bytes parsed: 14
-[22:59:39.213] [bmv2] [D] [thread 11062] [22.0] [cxt 0] Parser 'parser': end
-[22:59:39.213] [bmv2] [D] [thread 11062] [22.0] [cxt 0] Pipeline 'ingress': start
-[22:59:39.213] [bmv2] [T] [thread 11062] [22.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:39.213] [bmv2] [T] [thread 11062] [22.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:39.213] [bmv2] [D] [thread 11062] [22.0] [cxt 0] Looking up key:
+[23:28:18.818] [bmv2] [D] [thread 3257] [15.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
+[23:28:18.818] [bmv2] [D] [thread 3257] [15.0] [cxt 0] Action entry is NoAction - 
+[23:28:18.818] [bmv2] [T] [thread 3257] [15.0] [cxt 0] Action NoAction
+[23:28:18.818] [bmv2] [T] [thread 3257] [15.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
+[23:28:18.818] [bmv2] [D] [thread 3257] [15.0] [cxt 0] Pipeline 'ingress': end
+[23:28:18.818] [bmv2] [D] [thread 3257] [15.0] [cxt 0] Egress port is 0
+[23:28:18.819] [bmv2] [D] [thread 3258] [15.0] [cxt 0] Pipeline 'egress': start
+[23:28:18.819] [bmv2] [D] [thread 3258] [15.0] [cxt 0] Pipeline 'egress': end
+[23:28:18.819] [bmv2] [D] [thread 3258] [15.0] [cxt 0] Deparser 'deparser': start
+[23:28:18.819] [bmv2] [T] [thread 3258] [15.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[23:28:18.819] [bmv2] [D] [thread 3258] [15.0] [cxt 0] Deparsing header 'ethernet'
+[23:28:18.819] [bmv2] [D] [thread 3258] [15.0] [cxt 0] Deparser 'deparser': end
+[23:28:18.819] [bmv2] [D] [thread 3262] [15.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[23:28:19.320] [bmv2] [D] [thread 3257] [16.0] [cxt 0] Processing packet received on port 2
+[23:28:19.320] [bmv2] [D] [thread 3257] [16.0] [cxt 0] Parser 'parser': start
+[23:28:19.320] [bmv2] [D] [thread 3257] [16.0] [cxt 0] Parser 'parser' entering state 'start'
+[23:28:19.320] [bmv2] [D] [thread 3257] [16.0] [cxt 0] Extracting header 'ethernet'
+[23:28:19.321] [bmv2] [D] [thread 3257] [16.0] [cxt 0] Parser state 'start': key is 86dd
+[23:28:19.321] [bmv2] [T] [thread 3257] [16.0] [cxt 0] Bytes parsed: 14
+[23:28:19.321] [bmv2] [D] [thread 3257] [16.0] [cxt 0] Parser 'parser': end
+[23:28:19.321] [bmv2] [D] [thread 3257] [16.0] [cxt 0] Pipeline 'ingress': start
+[23:28:19.321] [bmv2] [T] [thread 3257] [16.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
+[23:28:19.322] [bmv2] [T] [thread 3257] [16.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
+[23:28:19.322] [bmv2] [D] [thread 3257] [16.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:39.213] [bmv2] [D] [thread 11062] [22.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:39.213] [bmv2] [D] [thread 11062] [22.0] [cxt 0] Action entry is NoAction - 
-[22:59:39.213] [bmv2] [T] [thread 11062] [22.0] [cxt 0] Action NoAction
-[22:59:39.213] [bmv2] [T] [thread 11062] [22.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:39.213] [bmv2] [D] [thread 11063] [20.0] [cxt 0] Pipeline 'egress': start
-[22:59:39.213] [bmv2] [D] [thread 11063] [20.0] [cxt 0] Pipeline 'egress': end
-[22:59:39.213] [bmv2] [D] [thread 11063] [20.0] [cxt 0] Deparser 'deparser': start
-[22:59:39.213] [bmv2] [T] [thread 11063] [20.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:39.213] [bmv2] [D] [thread 11063] [20.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:39.213] [bmv2] [D] [thread 11063] [20.0] [cxt 0] Deparser 'deparser': end
-[22:59:39.213] [bmv2] [D] [thread 11062] [22.0] [cxt 0] Looking up key:
+[23:28:19.322] [bmv2] [D] [thread 3257] [16.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
+[23:28:19.322] [bmv2] [D] [thread 3257] [16.0] [cxt 0] Action entry is NoAction - 
+[23:28:19.322] [bmv2] [T] [thread 3257] [16.0] [cxt 0] Action NoAction
+[23:28:19.322] [bmv2] [T] [thread 3257] [16.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
+[23:28:19.322] [bmv2] [D] [thread 3257] [16.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:39.213] [bmv2] [D] [thread 11067] [20.0] [cxt 0] Transmitting packet of size 70 out of port 0
-[22:59:39.213] [bmv2] [D] [thread 11063] [21.0] [cxt 0] Pipeline 'egress': start
-[22:59:39.213] [bmv2] [D] [thread 11063] [21.0] [cxt 0] Pipeline 'egress': end
-[22:59:39.213] [bmv2] [D] [thread 11063] [21.0] [cxt 0] Deparser 'deparser': start
-[22:59:39.213] [bmv2] [T] [thread 11063] [21.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:39.213] [bmv2] [D] [thread 11062] [22.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:39.213] [bmv2] [D] [thread 11062] [22.0] [cxt 0] Action entry is NoAction - 
-[22:59:39.213] [bmv2] [T] [thread 11062] [22.0] [cxt 0] Action NoAction
-[22:59:39.213] [bmv2] [T] [thread 11062] [22.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:39.213] [bmv2] [D] [thread 11062] [22.0] [cxt 0] Pipeline 'ingress': end
-[22:59:39.213] [bmv2] [D] [thread 11062] [22.0] [cxt 0] Egress port is 0
-[22:59:39.213] [bmv2] [D] [thread 11063] [21.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:39.214] [bmv2] [D] [thread 11063] [21.0] [cxt 0] Deparser 'deparser': end
-[22:59:39.214] [bmv2] [D] [thread 11063] [22.0] [cxt 0] Pipeline 'egress': start
-[22:59:39.214] [bmv2] [D] [thread 11063] [22.0] [cxt 0] Pipeline 'egress': end
-[22:59:39.214] [bmv2] [D] [thread 11063] [22.0] [cxt 0] Deparser 'deparser': start
-[22:59:39.214] [bmv2] [T] [thread 11063] [22.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:39.214] [bmv2] [D] [thread 11063] [22.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:39.214] [bmv2] [D] [thread 11063] [22.0] [cxt 0] Deparser 'deparser': end
-[22:59:39.214] [bmv2] [D] [thread 11067] [21.0] [cxt 0] Transmitting packet of size 70 out of port 0
-[22:59:39.214] [bmv2] [D] [thread 11067] [22.0] [cxt 0] Transmitting packet of size 70 out of port 0
-[22:59:39.720] [bmv2] [D] [thread 11062] [23.0] [cxt 0] Processing packet received on port 3
-[22:59:39.720] [bmv2] [D] [thread 11062] [23.0] [cxt 0] Parser 'parser': start
-[22:59:39.720] [bmv2] [D] [thread 11062] [23.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:39.720] [bmv2] [D] [thread 11062] [23.0] [cxt 0] Extracting header 'ethernet'
-[22:59:39.720] [bmv2] [D] [thread 11062] [23.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:39.720] [bmv2] [T] [thread 11062] [23.0] [cxt 0] Bytes parsed: 14
-[22:59:39.720] [bmv2] [D] [thread 11062] [23.0] [cxt 0] Parser 'parser': end
-[22:59:39.720] [bmv2] [D] [thread 11062] [23.0] [cxt 0] Pipeline 'ingress': start
-[22:59:39.720] [bmv2] [T] [thread 11062] [23.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:39.720] [bmv2] [T] [thread 11062] [23.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:39.720] [bmv2] [D] [thread 11062] [23.0] [cxt 0] Looking up key:
+[23:28:19.322] [bmv2] [D] [thread 3257] [16.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
+[23:28:19.322] [bmv2] [D] [thread 3257] [16.0] [cxt 0] Action entry is NoAction - 
+[23:28:19.322] [bmv2] [T] [thread 3257] [16.0] [cxt 0] Action NoAction
+[23:28:19.322] [bmv2] [T] [thread 3257] [16.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
+[23:28:19.322] [bmv2] [D] [thread 3257] [16.0] [cxt 0] Pipeline 'ingress': end
+[23:28:19.322] [bmv2] [D] [thread 3257] [16.0] [cxt 0] Egress port is 0
+[23:28:19.322] [bmv2] [D] [thread 3257] [17.0] [cxt 0] Processing packet received on port 1
+[23:28:19.323] [bmv2] [D] [thread 3257] [17.0] [cxt 0] Parser 'parser': start
+[23:28:19.323] [bmv2] [D] [thread 3257] [17.0] [cxt 0] Parser 'parser' entering state 'start'
+[23:28:19.323] [bmv2] [D] [thread 3257] [17.0] [cxt 0] Extracting header 'ethernet'
+[23:28:19.323] [bmv2] [D] [thread 3257] [17.0] [cxt 0] Parser state 'start': key is 86dd
+[23:28:19.323] [bmv2] [T] [thread 3257] [17.0] [cxt 0] Bytes parsed: 14
+[23:28:19.323] [bmv2] [D] [thread 3257] [17.0] [cxt 0] Parser 'parser': end
+[23:28:19.323] [bmv2] [D] [thread 3257] [17.0] [cxt 0] Pipeline 'ingress': start
+[23:28:19.323] [bmv2] [T] [thread 3257] [17.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
+[23:28:19.323] [bmv2] [T] [thread 3257] [17.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
+[23:28:19.323] [bmv2] [D] [thread 3257] [17.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:39.720] [bmv2] [D] [thread 11062] [23.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:39.720] [bmv2] [D] [thread 11062] [23.0] [cxt 0] Action entry is NoAction - 
-[22:59:39.720] [bmv2] [T] [thread 11062] [23.0] [cxt 0] Action NoAction
-[22:59:39.720] [bmv2] [T] [thread 11062] [23.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:39.720] [bmv2] [D] [thread 11062] [23.0] [cxt 0] Looking up key:
+[23:28:19.323] [bmv2] [D] [thread 3257] [17.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
+[23:28:19.323] [bmv2] [D] [thread 3258] [16.0] [cxt 0] Pipeline 'egress': start
+[23:28:19.323] [bmv2] [D] [thread 3257] [17.0] [cxt 0] Action entry is NoAction - 
+[23:28:19.323] [bmv2] [T] [thread 3257] [17.0] [cxt 0] Action NoAction
+[23:28:19.323] [bmv2] [T] [thread 3257] [17.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
+[23:28:19.323] [bmv2] [D] [thread 3257] [17.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:39.720] [bmv2] [D] [thread 11062] [23.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:39.720] [bmv2] [D] [thread 11062] [23.0] [cxt 0] Action entry is NoAction - 
-[22:59:39.720] [bmv2] [T] [thread 11062] [23.0] [cxt 0] Action NoAction
-[22:59:39.720] [bmv2] [T] [thread 11062] [23.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:39.721] [bmv2] [D] [thread 11062] [23.0] [cxt 0] Pipeline 'ingress': end
-[22:59:39.721] [bmv2] [D] [thread 11062] [23.0] [cxt 0] Egress port is 0
-[22:59:39.721] [bmv2] [D] [thread 11063] [23.0] [cxt 0] Pipeline 'egress': start
-[22:59:39.721] [bmv2] [D] [thread 11063] [23.0] [cxt 0] Pipeline 'egress': end
-[22:59:39.721] [bmv2] [D] [thread 11063] [23.0] [cxt 0] Deparser 'deparser': start
-[22:59:39.721] [bmv2] [T] [thread 11063] [23.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:39.721] [bmv2] [D] [thread 11063] [23.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:39.721] [bmv2] [D] [thread 11063] [23.0] [cxt 0] Deparser 'deparser': end
-[22:59:39.721] [bmv2] [D] [thread 11067] [23.0] [cxt 0] Transmitting packet of size 70 out of port 0
-[22:59:40.754] [bmv2] [D] [thread 11062] [24.0] [cxt 0] Processing packet received on port 3
-[22:59:40.754] [bmv2] [D] [thread 11062] [24.0] [cxt 0] Parser 'parser': start
-[22:59:40.754] [bmv2] [D] [thread 11062] [24.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:40.754] [bmv2] [D] [thread 11062] [24.0] [cxt 0] Extracting header 'ethernet'
-[22:59:40.754] [bmv2] [D] [thread 11062] [24.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:40.754] [bmv2] [T] [thread 11062] [24.0] [cxt 0] Bytes parsed: 14
-[22:59:40.754] [bmv2] [D] [thread 11062] [24.0] [cxt 0] Parser 'parser': end
-[22:59:40.754] [bmv2] [D] [thread 11062] [24.0] [cxt 0] Pipeline 'ingress': start
-[22:59:40.754] [bmv2] [T] [thread 11062] [24.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:40.754] [bmv2] [T] [thread 11062] [24.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:40.754] [bmv2] [D] [thread 11062] [24.0] [cxt 0] Looking up key:
+[23:28:19.323] [bmv2] [D] [thread 3257] [17.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
+[23:28:19.323] [bmv2] [D] [thread 3257] [17.0] [cxt 0] Action entry is NoAction - 
+[23:28:19.323] [bmv2] [T] [thread 3257] [17.0] [cxt 0] Action NoAction
+[23:28:19.323] [bmv2] [T] [thread 3257] [17.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
+[23:28:19.324] [bmv2] [D] [thread 3257] [17.0] [cxt 0] Pipeline 'ingress': end
+[23:28:19.324] [bmv2] [D] [thread 3257] [17.0] [cxt 0] Egress port is 0
+[23:28:19.323] [bmv2] [D] [thread 3258] [16.0] [cxt 0] Pipeline 'egress': end
+[23:28:19.324] [bmv2] [D] [thread 3258] [16.0] [cxt 0] Deparser 'deparser': start
+[23:28:19.324] [bmv2] [T] [thread 3258] [16.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[23:28:19.324] [bmv2] [D] [thread 3258] [16.0] [cxt 0] Deparsing header 'ethernet'
+[23:28:19.324] [bmv2] [D] [thread 3258] [16.0] [cxt 0] Deparser 'deparser': end
+[23:28:19.324] [bmv2] [D] [thread 3258] [17.0] [cxt 0] Pipeline 'egress': start
+[23:28:19.324] [bmv2] [D] [thread 3258] [17.0] [cxt 0] Pipeline 'egress': end
+[23:28:19.324] [bmv2] [D] [thread 3258] [17.0] [cxt 0] Deparser 'deparser': start
+[23:28:19.324] [bmv2] [T] [thread 3258] [17.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[23:28:19.324] [bmv2] [D] [thread 3258] [17.0] [cxt 0] Deparsing header 'ethernet'
+[23:28:19.324] [bmv2] [D] [thread 3258] [17.0] [cxt 0] Deparser 'deparser': end
+[23:28:19.324] [bmv2] [D] [thread 3262] [16.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[23:28:19.324] [bmv2] [D] [thread 3262] [17.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[23:28:20.087] [bmv2] [D] [thread 3257] [18.0] [cxt 0] Processing packet received on port 3
+[23:28:20.088] [bmv2] [D] [thread 3257] [18.0] [cxt 0] Parser 'parser': start
+[23:28:20.088] [bmv2] [D] [thread 3257] [18.0] [cxt 0] Parser 'parser' entering state 'start'
+[23:28:20.088] [bmv2] [D] [thread 3257] [18.0] [cxt 0] Extracting header 'ethernet'
+[23:28:20.089] [bmv2] [D] [thread 3257] [18.0] [cxt 0] Parser state 'start': key is 86dd
+[23:28:20.089] [bmv2] [T] [thread 3257] [18.0] [cxt 0] Bytes parsed: 14
+[23:28:20.089] [bmv2] [D] [thread 3257] [18.0] [cxt 0] Parser 'parser': end
+[23:28:20.090] [bmv2] [D] [thread 3257] [18.0] [cxt 0] Pipeline 'ingress': start
+[23:28:20.090] [bmv2] [T] [thread 3257] [18.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
+[23:28:20.090] [bmv2] [T] [thread 3257] [18.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
+[23:28:20.090] [bmv2] [D] [thread 3257] [18.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:40.754] [bmv2] [D] [thread 11062] [24.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:40.754] [bmv2] [D] [thread 11062] [24.0] [cxt 0] Action entry is NoAction - 
-[22:59:40.754] [bmv2] [T] [thread 11062] [24.0] [cxt 0] Action NoAction
-[22:59:40.754] [bmv2] [T] [thread 11062] [24.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:40.754] [bmv2] [D] [thread 11062] [24.0] [cxt 0] Looking up key:
+[23:28:20.090] [bmv2] [D] [thread 3257] [18.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
+[23:28:20.090] [bmv2] [D] [thread 3257] [18.0] [cxt 0] Action entry is NoAction - 
+[23:28:20.090] [bmv2] [T] [thread 3257] [18.0] [cxt 0] Action NoAction
+[23:28:20.090] [bmv2] [T] [thread 3257] [18.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
+[23:28:20.090] [bmv2] [D] [thread 3257] [18.0] [cxt 0] Looking up key:
 * hdr.int_pai.quantidade_filho: 00000000
 
-[22:59:40.754] [bmv2] [D] [thread 11062] [24.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:40.754] [bmv2] [D] [thread 11062] [24.0] [cxt 0] Action entry is NoAction - 
-[22:59:40.754] [bmv2] [T] [thread 11062] [24.0] [cxt 0] Action NoAction
-[22:59:40.754] [bmv2] [T] [thread 11062] [24.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:40.754] [bmv2] [D] [thread 11062] [24.0] [cxt 0] Pipeline 'ingress': end
-[22:59:40.754] [bmv2] [D] [thread 11062] [24.0] [cxt 0] Egress port is 0
-[22:59:40.755] [bmv2] [D] [thread 11063] [24.0] [cxt 0] Pipeline 'egress': start
-[22:59:40.755] [bmv2] [D] [thread 11063] [24.0] [cxt 0] Pipeline 'egress': end
-[22:59:40.755] [bmv2] [D] [thread 11063] [24.0] [cxt 0] Deparser 'deparser': start
-[22:59:40.755] [bmv2] [T] [thread 11063] [24.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:40.755] [bmv2] [D] [thread 11063] [24.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:40.755] [bmv2] [D] [thread 11063] [24.0] [cxt 0] Deparser 'deparser': end
-[22:59:40.755] [bmv2] [D] [thread 11067] [24.0] [cxt 0] Transmitting packet of size 70 out of port 0
-[22:59:54.058] [bmv2] [D] [thread 11062] [25.0] [cxt 0] Processing packet received on port 2
-[22:59:54.058] [bmv2] [D] [thread 11062] [25.0] [cxt 0] Parser 'parser': start
-[22:59:54.058] [bmv2] [D] [thread 11062] [25.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:54.058] [bmv2] [D] [thread 11062] [25.0] [cxt 0] Extracting header 'ethernet'
-[22:59:54.058] [bmv2] [D] [thread 11062] [25.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:54.058] [bmv2] [T] [thread 11062] [25.0] [cxt 0] Bytes parsed: 14
-[22:59:54.058] [bmv2] [D] [thread 11062] [25.0] [cxt 0] Parser 'parser': end
-[22:59:54.058] [bmv2] [D] [thread 11062] [25.0] [cxt 0] Pipeline 'ingress': start
-[22:59:54.058] [bmv2] [T] [thread 11062] [25.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:54.058] [bmv2] [T] [thread 11062] [25.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:54.058] [bmv2] [D] [thread 11062] [25.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[22:59:54.058] [bmv2] [D] [thread 11062] [25.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:54.058] [bmv2] [D] [thread 11062] [25.0] [cxt 0] Action entry is NoAction - 
-[22:59:54.058] [bmv2] [T] [thread 11062] [25.0] [cxt 0] Action NoAction
-[22:59:54.058] [bmv2] [T] [thread 11062] [25.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:54.058] [bmv2] [D] [thread 11062] [25.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[22:59:54.058] [bmv2] [D] [thread 11062] [25.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:54.058] [bmv2] [D] [thread 11062] [25.0] [cxt 0] Action entry is NoAction - 
-[22:59:54.058] [bmv2] [T] [thread 11062] [25.0] [cxt 0] Action NoAction
-[22:59:54.058] [bmv2] [T] [thread 11062] [25.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:54.058] [bmv2] [D] [thread 11062] [25.0] [cxt 0] Pipeline 'ingress': end
-[22:59:54.058] [bmv2] [D] [thread 11062] [25.0] [cxt 0] Egress port is 0
-[22:59:54.058] [bmv2] [D] [thread 11063] [25.0] [cxt 0] Pipeline 'egress': start
-[22:59:54.058] [bmv2] [D] [thread 11063] [25.0] [cxt 0] Pipeline 'egress': end
-[22:59:54.058] [bmv2] [D] [thread 11063] [25.0] [cxt 0] Deparser 'deparser': start
-[22:59:54.058] [bmv2] [T] [thread 11063] [25.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:54.058] [bmv2] [D] [thread 11063] [25.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:54.058] [bmv2] [D] [thread 11063] [25.0] [cxt 0] Deparser 'deparser': end
-[22:59:54.058] [bmv2] [D] [thread 11067] [25.0] [cxt 0] Transmitting packet of size 70 out of port 0
-[22:59:55.336] [bmv2] [D] [thread 11062] [26.0] [cxt 0] Processing packet received on port 3
-[22:59:55.336] [bmv2] [D] [thread 11062] [26.0] [cxt 0] Parser 'parser': start
-[22:59:55.336] [bmv2] [D] [thread 11062] [26.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:55.336] [bmv2] [D] [thread 11062] [26.0] [cxt 0] Extracting header 'ethernet'
-[22:59:55.336] [bmv2] [D] [thread 11062] [26.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:55.336] [bmv2] [T] [thread 11062] [26.0] [cxt 0] Bytes parsed: 14
-[22:59:55.336] [bmv2] [D] [thread 11062] [26.0] [cxt 0] Parser 'parser': end
-[22:59:55.336] [bmv2] [D] [thread 11062] [26.0] [cxt 0] Pipeline 'ingress': start
-[22:59:55.336] [bmv2] [T] [thread 11062] [26.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:55.336] [bmv2] [T] [thread 11062] [26.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:55.336] [bmv2] [D] [thread 11062] [26.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[22:59:55.336] [bmv2] [D] [thread 11062] [26.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:55.336] [bmv2] [D] [thread 11062] [26.0] [cxt 0] Action entry is NoAction - 
-[22:59:55.337] [bmv2] [T] [thread 11062] [26.0] [cxt 0] Action NoAction
-[22:59:55.337] [bmv2] [T] [thread 11062] [26.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:55.337] [bmv2] [D] [thread 11062] [26.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[22:59:55.337] [bmv2] [D] [thread 11062] [26.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:55.337] [bmv2] [D] [thread 11062] [26.0] [cxt 0] Action entry is NoAction - 
-[22:59:55.337] [bmv2] [T] [thread 11062] [26.0] [cxt 0] Action NoAction
-[22:59:55.337] [bmv2] [T] [thread 11062] [26.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:55.337] [bmv2] [D] [thread 11062] [26.0] [cxt 0] Pipeline 'ingress': end
-[22:59:55.337] [bmv2] [D] [thread 11062] [26.0] [cxt 0] Egress port is 0
-[22:59:55.337] [bmv2] [D] [thread 11063] [26.0] [cxt 0] Pipeline 'egress': start
-[22:59:55.337] [bmv2] [D] [thread 11063] [26.0] [cxt 0] Pipeline 'egress': end
-[22:59:55.337] [bmv2] [D] [thread 11063] [26.0] [cxt 0] Deparser 'deparser': start
-[22:59:55.337] [bmv2] [T] [thread 11063] [26.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:55.337] [bmv2] [D] [thread 11063] [26.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:55.337] [bmv2] [D] [thread 11063] [26.0] [cxt 0] Deparser 'deparser': end
-[22:59:55.337] [bmv2] [D] [thread 11067] [26.0] [cxt 0] Transmitting packet of size 70 out of port 0
-[22:59:56.873] [bmv2] [D] [thread 11062] [27.0] [cxt 0] Processing packet received on port 2
-[22:59:56.873] [bmv2] [D] [thread 11062] [27.0] [cxt 0] Parser 'parser': start
-[22:59:56.873] [bmv2] [D] [thread 11062] [27.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:56.873] [bmv2] [D] [thread 11062] [27.0] [cxt 0] Extracting header 'ethernet'
-[22:59:56.873] [bmv2] [D] [thread 11062] [27.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:56.873] [bmv2] [T] [thread 11062] [27.0] [cxt 0] Bytes parsed: 14
-[22:59:56.873] [bmv2] [D] [thread 11062] [27.0] [cxt 0] Parser 'parser': end
-[22:59:56.873] [bmv2] [D] [thread 11062] [27.0] [cxt 0] Pipeline 'ingress': start
-[22:59:56.873] [bmv2] [T] [thread 11062] [27.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:56.873] [bmv2] [T] [thread 11062] [27.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:56.873] [bmv2] [D] [thread 11062] [27.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[22:59:56.873] [bmv2] [D] [thread 11062] [27.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:56.873] [bmv2] [D] [thread 11062] [27.0] [cxt 0] Action entry is NoAction - 
-[22:59:56.873] [bmv2] [T] [thread 11062] [27.0] [cxt 0] Action NoAction
-[22:59:56.873] [bmv2] [T] [thread 11062] [27.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:56.873] [bmv2] [D] [thread 11062] [27.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[22:59:56.873] [bmv2] [D] [thread 11062] [27.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:56.873] [bmv2] [D] [thread 11062] [27.0] [cxt 0] Action entry is NoAction - 
-[22:59:56.873] [bmv2] [T] [thread 11062] [27.0] [cxt 0] Action NoAction
-[22:59:56.873] [bmv2] [T] [thread 11062] [27.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:56.873] [bmv2] [D] [thread 11062] [27.0] [cxt 0] Pipeline 'ingress': end
-[22:59:56.873] [bmv2] [D] [thread 11062] [27.0] [cxt 0] Egress port is 0
-[22:59:56.874] [bmv2] [D] [thread 11063] [27.0] [cxt 0] Pipeline 'egress': start
-[22:59:56.874] [bmv2] [D] [thread 11063] [27.0] [cxt 0] Pipeline 'egress': end
-[22:59:56.874] [bmv2] [D] [thread 11063] [27.0] [cxt 0] Deparser 'deparser': start
-[22:59:56.874] [bmv2] [T] [thread 11063] [27.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:56.874] [bmv2] [D] [thread 11063] [27.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:56.874] [bmv2] [D] [thread 11063] [27.0] [cxt 0] Deparser 'deparser': end
-[22:59:56.874] [bmv2] [D] [thread 11067] [27.0] [cxt 0] Transmitting packet of size 70 out of port 0
-[22:59:56.876] [bmv2] [D] [thread 11062] [28.0] [cxt 0] Processing packet received on port 1
-[22:59:56.876] [bmv2] [D] [thread 11062] [28.0] [cxt 0] Parser 'parser': start
-[22:59:56.876] [bmv2] [D] [thread 11062] [28.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:56.876] [bmv2] [D] [thread 11062] [28.0] [cxt 0] Extracting header 'ethernet'
-[22:59:56.876] [bmv2] [D] [thread 11062] [28.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:56.876] [bmv2] [T] [thread 11062] [28.0] [cxt 0] Bytes parsed: 14
-[22:59:56.876] [bmv2] [D] [thread 11062] [28.0] [cxt 0] Parser 'parser': end
-[22:59:56.876] [bmv2] [D] [thread 11062] [28.0] [cxt 0] Pipeline 'ingress': start
-[22:59:56.876] [bmv2] [T] [thread 11062] [28.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:56.876] [bmv2] [T] [thread 11062] [28.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:56.876] [bmv2] [D] [thread 11062] [28.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[22:59:56.876] [bmv2] [D] [thread 11062] [28.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:56.876] [bmv2] [D] [thread 11062] [28.0] [cxt 0] Action entry is NoAction - 
-[22:59:56.876] [bmv2] [T] [thread 11062] [28.0] [cxt 0] Action NoAction
-[22:59:56.876] [bmv2] [T] [thread 11062] [28.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:56.876] [bmv2] [D] [thread 11062] [28.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[22:59:56.876] [bmv2] [D] [thread 11062] [28.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:56.876] [bmv2] [D] [thread 11062] [28.0] [cxt 0] Action entry is NoAction - 
-[22:59:56.876] [bmv2] [T] [thread 11062] [28.0] [cxt 0] Action NoAction
-[22:59:56.876] [bmv2] [T] [thread 11062] [28.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:56.876] [bmv2] [D] [thread 11062] [28.0] [cxt 0] Pipeline 'ingress': end
-[22:59:56.876] [bmv2] [D] [thread 11062] [28.0] [cxt 0] Egress port is 0
-[22:59:56.876] [bmv2] [D] [thread 11063] [28.0] [cxt 0] Pipeline 'egress': start
-[22:59:56.876] [bmv2] [D] [thread 11063] [28.0] [cxt 0] Pipeline 'egress': end
-[22:59:56.876] [bmv2] [D] [thread 11063] [28.0] [cxt 0] Deparser 'deparser': start
-[22:59:56.876] [bmv2] [T] [thread 11063] [28.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:56.876] [bmv2] [D] [thread 11063] [28.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:56.876] [bmv2] [D] [thread 11063] [28.0] [cxt 0] Deparser 'deparser': end
-[22:59:56.876] [bmv2] [D] [thread 11067] [28.0] [cxt 0] Transmitting packet of size 70 out of port 0
-[22:59:58.920] [bmv2] [D] [thread 11062] [29.0] [cxt 0] Processing packet received on port 3
-[22:59:58.920] [bmv2] [D] [thread 11062] [29.0] [cxt 0] Parser 'parser': start
-[22:59:58.920] [bmv2] [D] [thread 11062] [29.0] [cxt 0] Parser 'parser' entering state 'start'
-[22:59:58.920] [bmv2] [D] [thread 11062] [29.0] [cxt 0] Extracting header 'ethernet'
-[22:59:58.920] [bmv2] [D] [thread 11062] [29.0] [cxt 0] Parser state 'start': key is 86dd
-[22:59:58.920] [bmv2] [T] [thread 11062] [29.0] [cxt 0] Bytes parsed: 14
-[22:59:58.920] [bmv2] [D] [thread 11062] [29.0] [cxt 0] Parser 'parser': end
-[22:59:58.920] [bmv2] [D] [thread 11062] [29.0] [cxt 0] Pipeline 'ingress': start
-[22:59:58.920] [bmv2] [T] [thread 11062] [29.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[22:59:58.920] [bmv2] [T] [thread 11062] [29.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[22:59:58.920] [bmv2] [D] [thread 11062] [29.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[22:59:58.920] [bmv2] [D] [thread 11062] [29.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[22:59:58.920] [bmv2] [D] [thread 11062] [29.0] [cxt 0] Action entry is NoAction - 
-[22:59:58.920] [bmv2] [T] [thread 11062] [29.0] [cxt 0] Action NoAction
-[22:59:58.920] [bmv2] [T] [thread 11062] [29.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[22:59:58.920] [bmv2] [D] [thread 11062] [29.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[22:59:58.920] [bmv2] [D] [thread 11062] [29.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[22:59:58.920] [bmv2] [D] [thread 11062] [29.0] [cxt 0] Action entry is NoAction - 
-[22:59:58.920] [bmv2] [T] [thread 11062] [29.0] [cxt 0] Action NoAction
-[22:59:58.920] [bmv2] [T] [thread 11062] [29.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[22:59:58.920] [bmv2] [D] [thread 11062] [29.0] [cxt 0] Pipeline 'ingress': end
-[22:59:58.920] [bmv2] [D] [thread 11062] [29.0] [cxt 0] Egress port is 0
-[22:59:58.920] [bmv2] [D] [thread 11063] [29.0] [cxt 0] Pipeline 'egress': start
-[22:59:58.920] [bmv2] [D] [thread 11063] [29.0] [cxt 0] Pipeline 'egress': end
-[22:59:58.920] [bmv2] [D] [thread 11063] [29.0] [cxt 0] Deparser 'deparser': start
-[22:59:58.920] [bmv2] [T] [thread 11063] [29.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[22:59:58.920] [bmv2] [D] [thread 11063] [29.0] [cxt 0] Deparsing header 'ethernet'
-[22:59:58.920] [bmv2] [D] [thread 11063] [29.0] [cxt 0] Deparser 'deparser': end
-[22:59:58.920] [bmv2] [D] [thread 11067] [29.0] [cxt 0] Transmitting packet of size 70 out of port 0
-[23:00:25.544] [bmv2] [D] [thread 11062] [30.0] [cxt 0] Processing packet received on port 3
-[23:00:25.544] [bmv2] [D] [thread 11062] [30.0] [cxt 0] Parser 'parser': start
-[23:00:25.544] [bmv2] [D] [thread 11062] [30.0] [cxt 0] Parser 'parser' entering state 'start'
-[23:00:25.544] [bmv2] [D] [thread 11062] [30.0] [cxt 0] Extracting header 'ethernet'
-[23:00:25.544] [bmv2] [D] [thread 11062] [30.0] [cxt 0] Parser state 'start': key is 86dd
-[23:00:25.544] [bmv2] [T] [thread 11062] [30.0] [cxt 0] Bytes parsed: 14
-[23:00:25.544] [bmv2] [D] [thread 11062] [30.0] [cxt 0] Parser 'parser': end
-[23:00:25.544] [bmv2] [D] [thread 11062] [30.0] [cxt 0] Pipeline 'ingress': start
-[23:00:25.544] [bmv2] [T] [thread 11062] [30.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[23:00:25.544] [bmv2] [T] [thread 11062] [30.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[23:00:25.544] [bmv2] [D] [thread 11062] [30.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[23:00:25.544] [bmv2] [D] [thread 11062] [30.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[23:00:25.544] [bmv2] [D] [thread 11062] [30.0] [cxt 0] Action entry is NoAction - 
-[23:00:25.545] [bmv2] [T] [thread 11062] [30.0] [cxt 0] Action NoAction
-[23:00:25.545] [bmv2] [T] [thread 11062] [30.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[23:00:25.545] [bmv2] [D] [thread 11062] [30.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[23:00:25.545] [bmv2] [D] [thread 11062] [30.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[23:00:25.545] [bmv2] [D] [thread 11062] [30.0] [cxt 0] Action entry is NoAction - 
-[23:00:25.545] [bmv2] [T] [thread 11062] [30.0] [cxt 0] Action NoAction
-[23:00:25.545] [bmv2] [T] [thread 11062] [30.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[23:00:25.545] [bmv2] [D] [thread 11062] [30.0] [cxt 0] Pipeline 'ingress': end
-[23:00:25.545] [bmv2] [D] [thread 11062] [30.0] [cxt 0] Egress port is 0
-[23:00:25.545] [bmv2] [D] [thread 11063] [30.0] [cxt 0] Pipeline 'egress': start
-[23:00:25.545] [bmv2] [D] [thread 11063] [30.0] [cxt 0] Pipeline 'egress': end
-[23:00:25.545] [bmv2] [D] [thread 11063] [30.0] [cxt 0] Deparser 'deparser': start
-[23:00:25.545] [bmv2] [T] [thread 11063] [30.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[23:00:25.545] [bmv2] [D] [thread 11063] [30.0] [cxt 0] Deparsing header 'ethernet'
-[23:00:25.545] [bmv2] [D] [thread 11063] [30.0] [cxt 0] Deparser 'deparser': end
-[23:00:25.545] [bmv2] [D] [thread 11067] [30.0] [cxt 0] Transmitting packet of size 70 out of port 0
-[23:00:25.545] [bmv2] [D] [thread 11062] [31.0] [cxt 0] Processing packet received on port 2
-[23:00:25.545] [bmv2] [D] [thread 11062] [31.0] [cxt 0] Parser 'parser': start
-[23:00:25.545] [bmv2] [D] [thread 11062] [31.0] [cxt 0] Parser 'parser' entering state 'start'
-[23:00:25.545] [bmv2] [D] [thread 11062] [31.0] [cxt 0] Extracting header 'ethernet'
-[23:00:25.545] [bmv2] [D] [thread 11062] [31.0] [cxt 0] Parser state 'start': key is 86dd
-[23:00:25.545] [bmv2] [T] [thread 11062] [31.0] [cxt 0] Bytes parsed: 14
-[23:00:25.545] [bmv2] [D] [thread 11062] [31.0] [cxt 0] Parser 'parser': end
-[23:00:25.545] [bmv2] [D] [thread 11062] [31.0] [cxt 0] Pipeline 'ingress': start
-[23:00:25.545] [bmv2] [T] [thread 11062] [31.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[23:00:25.545] [bmv2] [T] [thread 11062] [31.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[23:00:25.545] [bmv2] [D] [thread 11062] [31.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[23:00:25.545] [bmv2] [D] [thread 11062] [31.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[23:00:25.545] [bmv2] [D] [thread 11062] [31.0] [cxt 0] Action entry is NoAction - 
-[23:00:25.545] [bmv2] [T] [thread 11062] [31.0] [cxt 0] Action NoAction
-[23:00:25.545] [bmv2] [T] [thread 11062] [31.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[23:00:25.545] [bmv2] [D] [thread 11062] [31.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[23:00:25.545] [bmv2] [D] [thread 11062] [31.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[23:00:25.545] [bmv2] [D] [thread 11062] [31.0] [cxt 0] Action entry is NoAction - 
-[23:00:25.545] [bmv2] [T] [thread 11062] [31.0] [cxt 0] Action NoAction
-[23:00:25.545] [bmv2] [T] [thread 11062] [31.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[23:00:25.545] [bmv2] [D] [thread 11062] [31.0] [cxt 0] Pipeline 'ingress': end
-[23:00:25.545] [bmv2] [D] [thread 11062] [31.0] [cxt 0] Egress port is 0
-[23:00:25.545] [bmv2] [D] [thread 11063] [31.0] [cxt 0] Pipeline 'egress': start
-[23:00:25.545] [bmv2] [D] [thread 11063] [31.0] [cxt 0] Pipeline 'egress': end
-[23:00:25.545] [bmv2] [D] [thread 11063] [31.0] [cxt 0] Deparser 'deparser': start
-[23:00:25.545] [bmv2] [T] [thread 11063] [31.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[23:00:25.545] [bmv2] [D] [thread 11063] [31.0] [cxt 0] Deparsing header 'ethernet'
-[23:00:25.545] [bmv2] [D] [thread 11063] [31.0] [cxt 0] Deparser 'deparser': end
-[23:00:25.545] [bmv2] [D] [thread 11067] [31.0] [cxt 0] Transmitting packet of size 70 out of port 0
-[23:00:29.640] [bmv2] [D] [thread 11062] [32.0] [cxt 0] Processing packet received on port 2
-[23:00:29.640] [bmv2] [D] [thread 11062] [32.0] [cxt 0] Parser 'parser': start
-[23:00:29.640] [bmv2] [D] [thread 11062] [32.0] [cxt 0] Parser 'parser' entering state 'start'
-[23:00:29.640] [bmv2] [D] [thread 11062] [32.0] [cxt 0] Extracting header 'ethernet'
-[23:00:29.640] [bmv2] [D] [thread 11062] [32.0] [cxt 0] Parser state 'start': key is 86dd
-[23:00:29.640] [bmv2] [T] [thread 11062] [32.0] [cxt 0] Bytes parsed: 14
-[23:00:29.640] [bmv2] [D] [thread 11062] [32.0] [cxt 0] Parser 'parser': end
-[23:00:29.640] [bmv2] [D] [thread 11062] [32.0] [cxt 0] Pipeline 'ingress': start
-[23:00:29.640] [bmv2] [T] [thread 11062] [32.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[23:00:29.640] [bmv2] [T] [thread 11062] [32.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[23:00:29.640] [bmv2] [D] [thread 11062] [32.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[23:00:29.640] [bmv2] [D] [thread 11062] [32.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[23:00:29.640] [bmv2] [D] [thread 11062] [32.0] [cxt 0] Action entry is NoAction - 
-[23:00:29.640] [bmv2] [T] [thread 11062] [32.0] [cxt 0] Action NoAction
-[23:00:29.640] [bmv2] [T] [thread 11062] [32.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[23:00:29.640] [bmv2] [D] [thread 11062] [32.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[23:00:29.640] [bmv2] [D] [thread 11062] [32.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[23:00:29.640] [bmv2] [D] [thread 11062] [32.0] [cxt 0] Action entry is NoAction - 
-[23:00:29.640] [bmv2] [T] [thread 11062] [32.0] [cxt 0] Action NoAction
-[23:00:29.640] [bmv2] [T] [thread 11062] [32.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[23:00:29.640] [bmv2] [D] [thread 11062] [32.0] [cxt 0] Pipeline 'ingress': end
-[23:00:29.640] [bmv2] [D] [thread 11062] [32.0] [cxt 0] Egress port is 0
-[23:00:29.641] [bmv2] [D] [thread 11063] [32.0] [cxt 0] Pipeline 'egress': start
-[23:00:29.641] [bmv2] [D] [thread 11063] [32.0] [cxt 0] Pipeline 'egress': end
-[23:00:29.641] [bmv2] [D] [thread 11063] [32.0] [cxt 0] Deparser 'deparser': start
-[23:00:29.641] [bmv2] [T] [thread 11063] [32.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[23:00:29.641] [bmv2] [D] [thread 11063] [32.0] [cxt 0] Deparsing header 'ethernet'
-[23:00:29.641] [bmv2] [D] [thread 11063] [32.0] [cxt 0] Deparser 'deparser': end
-[23:00:29.641] [bmv2] [D] [thread 11067] [32.0] [cxt 0] Transmitting packet of size 70 out of port 0
-[23:00:31.688] [bmv2] [D] [thread 11062] [33.0] [cxt 0] Processing packet received on port 1
-[23:00:31.688] [bmv2] [D] [thread 11062] [33.0] [cxt 0] Parser 'parser': start
-[23:00:31.688] [bmv2] [D] [thread 11062] [33.0] [cxt 0] Parser 'parser' entering state 'start'
-[23:00:31.688] [bmv2] [D] [thread 11062] [33.0] [cxt 0] Extracting header 'ethernet'
-[23:00:31.688] [bmv2] [D] [thread 11062] [33.0] [cxt 0] Parser state 'start': key is 86dd
-[23:00:31.688] [bmv2] [T] [thread 11062] [33.0] [cxt 0] Bytes parsed: 14
-[23:00:31.688] [bmv2] [D] [thread 11062] [33.0] [cxt 0] Parser 'parser': end
-[23:00:31.688] [bmv2] [D] [thread 11062] [33.0] [cxt 0] Pipeline 'ingress': start
-[23:00:31.688] [bmv2] [T] [thread 11062] [33.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[23:00:31.688] [bmv2] [T] [thread 11062] [33.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[23:00:31.688] [bmv2] [D] [thread 11062] [33.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[23:00:31.688] [bmv2] [D] [thread 11062] [33.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[23:00:31.688] [bmv2] [D] [thread 11062] [33.0] [cxt 0] Action entry is NoAction - 
-[23:00:31.688] [bmv2] [T] [thread 11062] [33.0] [cxt 0] Action NoAction
-[23:00:31.688] [bmv2] [T] [thread 11062] [33.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[23:00:31.688] [bmv2] [D] [thread 11062] [33.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[23:00:31.688] [bmv2] [D] [thread 11062] [33.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[23:00:31.688] [bmv2] [D] [thread 11062] [33.0] [cxt 0] Action entry is NoAction - 
-[23:00:31.688] [bmv2] [T] [thread 11062] [33.0] [cxt 0] Action NoAction
-[23:00:31.688] [bmv2] [T] [thread 11062] [33.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[23:00:31.688] [bmv2] [D] [thread 11062] [33.0] [cxt 0] Pipeline 'ingress': end
-[23:00:31.688] [bmv2] [D] [thread 11062] [33.0] [cxt 0] Egress port is 0
-[23:00:31.689] [bmv2] [D] [thread 11063] [33.0] [cxt 0] Pipeline 'egress': start
-[23:00:31.689] [bmv2] [D] [thread 11063] [33.0] [cxt 0] Pipeline 'egress': end
-[23:00:31.690] [bmv2] [D] [thread 11063] [33.0] [cxt 0] Deparser 'deparser': start
-[23:00:31.690] [bmv2] [T] [thread 11063] [33.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[23:00:31.690] [bmv2] [D] [thread 11063] [33.0] [cxt 0] Deparsing header 'ethernet'
-[23:00:31.690] [bmv2] [D] [thread 11063] [33.0] [cxt 0] Deparser 'deparser': end
-[23:00:31.690] [bmv2] [D] [thread 11067] [33.0] [cxt 0] Transmitting packet of size 70 out of port 0
-[23:00:33.737] [bmv2] [D] [thread 11062] [34.0] [cxt 0] Processing packet received on port 3
-[23:00:33.737] [bmv2] [D] [thread 11062] [34.0] [cxt 0] Parser 'parser': start
-[23:00:33.737] [bmv2] [D] [thread 11062] [34.0] [cxt 0] Parser 'parser' entering state 'start'
-[23:00:33.737] [bmv2] [D] [thread 11062] [34.0] [cxt 0] Extracting header 'ethernet'
-[23:00:33.737] [bmv2] [D] [thread 11062] [34.0] [cxt 0] Parser state 'start': key is 86dd
-[23:00:33.737] [bmv2] [T] [thread 11062] [34.0] [cxt 0] Bytes parsed: 14
-[23:00:33.737] [bmv2] [D] [thread 11062] [34.0] [cxt 0] Parser 'parser': end
-[23:00:33.737] [bmv2] [D] [thread 11062] [34.0] [cxt 0] Pipeline 'ingress': start
-[23:00:33.737] [bmv2] [T] [thread 11062] [34.0] [cxt 0] basic.p4(178) Condition "hdr.int_pai.isValid()" (node_2) is false
-[23:00:33.737] [bmv2] [T] [thread 11062] [34.0] [cxt 0] Applying table 'MyIngress.int_pai_nao_existe'
-[23:00:33.737] [bmv2] [D] [thread 11062] [34.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[23:00:33.737] [bmv2] [D] [thread 11062] [34.0] [cxt 0] Table 'MyIngress.int_pai_nao_existe': miss
-[23:00:33.737] [bmv2] [D] [thread 11062] [34.0] [cxt 0] Action entry is NoAction - 
-[23:00:33.737] [bmv2] [T] [thread 11062] [34.0] [cxt 0] Action NoAction
-[23:00:33.737] [bmv2] [T] [thread 11062] [34.0] [cxt 0] Applying table 'MyIngress.int_pai_existe'
-[23:00:33.737] [bmv2] [D] [thread 11062] [34.0] [cxt 0] Looking up key:
-* hdr.int_pai.quantidade_filho: 00000000
-
-[23:00:33.737] [bmv2] [D] [thread 11062] [34.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
-[23:00:33.737] [bmv2] [D] [thread 11062] [34.0] [cxt 0] Action entry is NoAction - 
-[23:00:33.737] [bmv2] [T] [thread 11062] [34.0] [cxt 0] Action NoAction
-[23:00:33.737] [bmv2] [T] [thread 11062] [34.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
-[23:00:33.737] [bmv2] [D] [thread 11062] [34.0] [cxt 0] Pipeline 'ingress': end
-[23:00:33.737] [bmv2] [D] [thread 11062] [34.0] [cxt 0] Egress port is 0
-[23:00:33.738] [bmv2] [D] [thread 11063] [34.0] [cxt 0] Pipeline 'egress': start
-[23:00:33.738] [bmv2] [D] [thread 11063] [34.0] [cxt 0] Pipeline 'egress': end
-[23:00:33.738] [bmv2] [D] [thread 11063] [34.0] [cxt 0] Deparser 'deparser': start
-[23:00:33.738] [bmv2] [T] [thread 11063] [34.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
-[23:00:33.738] [bmv2] [D] [thread 11063] [34.0] [cxt 0] Deparsing header 'ethernet'
-[23:00:33.738] [bmv2] [D] [thread 11063] [34.0] [cxt 0] Deparser 'deparser': end
-[23:00:33.738] [bmv2] [D] [thread 11067] [34.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[23:28:20.090] [bmv2] [D] [thread 3257] [18.0] [cxt 0] Table 'MyIngress.int_pai_existe': miss
+[23:28:20.090] [bmv2] [D] [thread 3257] [18.0] [cxt 0] Action entry is NoAction - 
+[23:28:20.090] [bmv2] [T] [thread 3257] [18.0] [cxt 0] Action NoAction
+[23:28:20.090] [bmv2] [T] [thread 3257] [18.0] [cxt 0] basic.p4(185) Condition "hdr.ipv4.isValid()" (node_6) is false
+[23:28:20.090] [bmv2] [D] [thread 3257] [18.0] [cxt 0] Pipeline 'ingress': end
+[23:28:20.090] [bmv2] [D] [thread 3257] [18.0] [cxt 0] Egress port is 0
+[23:28:20.091] [bmv2] [D] [thread 3258] [18.0] [cxt 0] Pipeline 'egress': start
+[23:28:20.091] [bmv2] [D] [thread 3258] [18.0] [cxt 0] Pipeline 'egress': end
+[23:28:20.091] [bmv2] [D] [thread 3258] [18.0] [cxt 0] Deparser 'deparser': start
+[23:28:20.091] [bmv2] [T] [thread 3258] [18.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[23:28:20.091] [bmv2] [D] [thread 3258] [18.0] [cxt 0] Deparsing header 'ethernet'
+[23:28:20.091] [bmv2] [D] [thread 3258] [18.0] [cxt 0] Deparser 'deparser': end
+[23:28:20.091] [bmv2] [D] [thread 3262] [18.0] [cxt 0] Transmitting packet of size 70 out of port 0
+open: No such file or directory
 open: No such file or directory
 open: No such file or directory
 open: No such file or directory
