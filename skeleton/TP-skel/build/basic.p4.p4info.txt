@@ -55,18 +55,6 @@ actions {
     name: "port"
     bitwidth: 9
   }
-  params {
-    id: 3
-    name: "is_end_host"
-    bitwidth: 1
-  }
-}
-actions {
-  preamble {
-    id: 22849857
-    name: "MyIngress.add_int_filho"
-    alias: "add_int_filho"
-  }
 }
 registers {
   preamble {

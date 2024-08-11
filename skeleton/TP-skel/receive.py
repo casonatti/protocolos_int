@@ -4,15 +4,13 @@ import sys
 
 from scapy.all import (
     Packet,
+    IP,
     TCP,
-    FieldLenField,
-    FieldListField,
     BitField,
-    ByteField,
     IntField,
     PacketListField,
     IPOption,
-    ShortField,
+    bind_layers,
     get_if_list,
     sniff
 )
@@ -47,20 +45,19 @@ def get_if():
 
 class INT_Filho(Packet):
     name = "INT Filho"
-    fields_desc = [  IntField("ID_Switch",0),
-                     BitField("Porta_Entrada",0, 9),
-                     BitField("Porta_Saida",0, 9),
-                     BitField("TimeStamp",0, 48),
-                     BitField("Padding",0, 6),
+    fields_desc = [  IntField("id_switch",0),
+                     BitField("porta_entrada",0, 9),
+                     BitField("porta_saida",0, 9),
+                     BitField("timeStamp",0, 48),
+                     BitField("padding",0, 6),
                     ]
 
 class INT(Packet):
     name = "INT packet"
 
-    fields_desc=[ IntField("Tamanho_Filho",0),
-                  IntField("Quantidade_Filhos", None),
-                  ByteField("next_header", 6),
-                  PacketListField("plist", None, INT_Filho, count_from= lambda pkt:pkt.Quantidade_Filhos)]
+    fields_desc=[ IntField("tamanho_filho",0),
+                  IntField("quantidade_filhos", None),
+                  PacketListField("plist", None, INT_Filho, count_from= lambda pkt:pkt.quantidade_filhos)]
 
 
 # def handle_pkt(pkt):
@@ -73,11 +70,11 @@ class INT(Packet):
 
 def handle_pkt(pkt):
     
-    #if IP in pkt and pkt[IP].proto == 150:
-    if INT in pkt and pkt[INT].next_header!= 1:
+    if TCP in pkt and pkt[TCP].dport == 1234:
+    # if INT in pkt and pkt[INT].proto == 150:
       print("got a packet")
       pkt.show2()
-      
+
     sys.stdout.flush()
 
 
@@ -86,6 +83,9 @@ def main():
     iface = ifaces[0]
     print("sniffing on %s" % iface)
     sys.stdout.flush()
+
+    # bind_layers(INT, IP, proto=150)
+
     sniff(iface = iface,
           prn = lambda x: handle_pkt(x))
 

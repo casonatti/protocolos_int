@@ -22,6 +22,7 @@ header ethernet_t {
 header int_pai_t {
   bit<32> tamanho_filho;
   bit<32> quantidade_filhos;
+  bit<16> prox_header;
 }
 
 header int_filho_t {
@@ -49,7 +50,6 @@ header ipv4_t {
 
 struct metadata {
   bit<32> filhos_restantes;
-  bit<1> is_end_host;
 }
 
 struct headers {
@@ -128,12 +128,11 @@ control MyIngress(inout headers hdr,
       mark_to_drop(standard_metadata);
     }
     
-    action ipv4_forward(macAddr_t dstAddr, egressSpec_t port, bit<1> is_end_host) {
+    action ipv4_forward(macAddr_t dstAddr, egressSpec_t port) {
       standard_metadata.egress_spec = port;
       hdr.ethernet.srcAddr = hdr.ethernet.dstAddr;
       hdr.ethernet.dstAddr = dstAddr;
       hdr.ipv4.ttl = hdr.ipv4.ttl - 1;
-      meta.is_end_host = is_end_host;
     }
 
     
@@ -164,13 +163,14 @@ control MyIngress(inout headers hdr,
     }
 
     apply {
-      if(!hdr.int_pai.isValid()){
-        hdr.int_pai.setValid();
-        hdr.int_pai.tamanho_filho = 13;
-        hdr.int_pai.quantidade_filhos = 0;
-      } else {
-        add_int_filho();
-      }
+      //if(!hdr.int_pai.isValid()){
+      //  hdr.int_pai.setValid();
+      //  hdr.int_pai.tamanho_filho = 13;
+      //  hdr.int_pai.quantidade_filhos = 0;
+      //  hdr.int_pai.prox_header = TYPE_IPV4;
+      //} else {
+      //  add_int_filho();
+      //}
 
       if (hdr.ipv4.isValid()) {            
         ipv4_lpm.apply();
