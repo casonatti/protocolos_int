@@ -24,50 +24,6 @@ tables {
   }
   size: 1024
 }
-tables {
-  preamble {
-    id: 40747316
-    name: "MyIngress.int_pai_nao_existe"
-    alias: "int_pai_nao_existe"
-  }
-  match_fields {
-    id: 1
-    name: "hdr.int_pai.quantidade_filho"
-    bitwidth: 32
-    match_type: EXACT
-  }
-  action_refs {
-    id: 19324883
-  }
-  action_refs {
-    id: 21257015
-    annotations: "@defaultonly"
-    scope: DEFAULT_ONLY
-  }
-  size: 1
-}
-tables {
-  preamble {
-    id: 39148819
-    name: "MyIngress.int_pai_existe"
-    alias: "int_pai_existe"
-  }
-  match_fields {
-    id: 1
-    name: "hdr.int_pai.quantidade_filho"
-    bitwidth: 32
-    match_type: EXACT
-  }
-  action_refs {
-    id: 17980624
-  }
-  action_refs {
-    id: 21257015
-    annotations: "@defaultonly"
-    scope: DEFAULT_ONLY
-  }
-  size: 32
-}
 actions {
   preamble {
     id: 21257015
@@ -81,20 +37,6 @@ actions {
     id: 25652968
     name: "MyIngress.drop"
     alias: "drop"
-  }
-}
-actions {
-  preamble {
-    id: 19324883
-    name: "MyIngress.int_add_pai"
-    alias: "int_add_pai"
-  }
-}
-actions {
-  preamble {
-    id: 17980624
-    name: "MyIngress.int_add_filho"
-    alias: "int_add_filho"
   }
 }
 actions {
@@ -113,6 +55,33 @@ actions {
     name: "port"
     bitwidth: 9
   }
+  params {
+    id: 3
+    name: "is_end_host"
+    bitwidth: 1
+  }
+}
+actions {
+  preamble {
+    id: 22849857
+    name: "MyIngress.add_int_filho"
+    alias: "add_int_filho"
+  }
+}
+registers {
+  preamble {
+    id: 381620997
+    name: "MyIngress.swid"
+    alias: "swid"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 1
 }
 type_info {
 }
