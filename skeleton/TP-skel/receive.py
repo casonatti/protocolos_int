@@ -88,7 +88,7 @@ def main():
     print("sniffing on %s" % iface)
     sys.stdout.flush()
 
-    bind_layers(Ether, INT, Type = 0x1212)
+    bind_layers(Ether, INT, type = 0x1212)
     bind_layers(INT, INT_Filho)
     bind_layers(INT_Filho, IP)
 
