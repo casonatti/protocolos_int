@@ -2074,3 +2074,99 @@ Action entry: MyIngress.ipv4_forward - 80000000222,1,
 [15:35:30.160] [bmv2] [D] [thread 4806] [41.0] [cxt 0] Deparsing header 'int_filho[0]'
 [15:35:30.160] [bmv2] [D] [thread 4806] [41.0] [cxt 0] Deparser 'deparser': end
 [15:35:30.160] [bmv2] [D] [thread 4810] [41.0] [cxt 0] Transmitting packet of size 93 out of port 0
+[15:35:34.263] [bmv2] [D] [thread 4805] [42.0] [cxt 0] Processing packet received on port 3
+[15:35:34.263] [bmv2] [D] [thread 4805] [42.0] [cxt 0] Parser 'parser': start
+[15:35:34.264] [bmv2] [D] [thread 4805] [42.0] [cxt 0] Parser 'parser' entering state 'start'
+[15:35:34.264] [bmv2] [D] [thread 4805] [42.0] [cxt 0] Extracting header 'ethernet'
+[15:35:34.265] [bmv2] [D] [thread 4805] [42.0] [cxt 0] Parser state 'start': key is 86dd
+[15:35:34.266] [bmv2] [T] [thread 4805] [42.0] [cxt 0] Bytes parsed: 14
+[15:35:34.266] [bmv2] [D] [thread 4805] [42.0] [cxt 0] Parser 'parser': end
+[15:35:34.267] [bmv2] [D] [thread 4805] [42.0] [cxt 0] Pipeline 'ingress': start
+[15:35:34.267] [bmv2] [T] [thread 4805] [42.0] [cxt 0] basic.p4(168) Condition "hdr.int_pai.isValid()" (node_2) is false
+[15:35:34.267] [bmv2] [T] [thread 4805] [42.0] [cxt 0] Applying table 'tbl_basic169'
+[15:35:34.268] [bmv2] [D] [thread 4805] [42.0] [cxt 0] Looking up key:
+
+[15:35:34.268] [bmv2] [D] [thread 4805] [42.0] [cxt 0] Table 'tbl_basic169': miss
+[15:35:34.268] [bmv2] [D] [thread 4805] [42.0] [cxt 0] Action entry is basic169 - 
+[15:35:34.268] [bmv2] [T] [thread 4805] [42.0] [cxt 0] Action basic169
+[15:35:34.268] [bmv2] [T] [thread 4805] [42.0] [cxt 0] basic.p4(169) Primitive hdr.int_pai.setValid()
+[15:35:34.269] [bmv2] [T] [thread 4805] [42.0] [cxt 0] basic.p4(170) Primitive hdr.int_pai.tamanho_filho = 13
+[15:35:34.269] [bmv2] [T] [thread 4805] [42.0] [cxt 0] basic.p4(171) Primitive hdr.int_pai.quantidade_filhos = 0
+[15:35:34.269] [bmv2] [T] [thread 4805] [42.0] [cxt 0] basic.p4(6) Primitive 0x800; ...
+[15:35:34.270] [bmv2] [T] [thread 4805] [42.0] [cxt 0] basic.p4(5) Primitive 0x1212; ...
+[15:35:34.270] [bmv2] [T] [thread 4805] [42.0] [cxt 0] Applying table 'tbl_add_int_filho_0'
+[15:35:34.270] [bmv2] [D] [thread 4805] [42.0] [cxt 0] Looking up key:
+
+[15:35:34.270] [bmv2] [D] [thread 4805] [42.0] [cxt 0] Table 'tbl_add_int_filho_0': miss
+[15:35:34.270] [bmv2] [D] [thread 4805] [42.0] [cxt 0] Action entry is MyIngress.add_int_filho - 
+[15:35:34.270] [bmv2] [T] [thread 4805] [42.0] [cxt 0] Action MyIngress.add_int_filho
+[15:35:34.271] [bmv2] [T] [thread 4805] [42.0] [cxt 0] basic.p4(154) Primitive swid.read(var_swid, 0)
+[15:35:34.271] [bmv2] [T] [thread 4805] [42.0] [cxt 0] Read register 'MyIngress.swid' at index 0 read value 0
+[15:35:34.271] [bmv2] [T] [thread 4805] [42.0] [cxt 0] basic.p4(155) Primitive hdr.int_pai.quantidade_filhos = hdr.int_pai.quantidade_filhos + 1
+[15:35:34.271] [bmv2] [T] [thread 4805] [42.0] [cxt 0] basic.p4(158) Primitive hdr.int_filho.push_front(1)
+[15:35:34.271] [bmv2] [T] [thread 4805] [42.0] [cxt 0] basic.p4(159) Primitive hdr.int_filho[0].setValid()
+[15:35:34.271] [bmv2] [T] [thread 4805] [42.0] [cxt 0] basic.p4(160) Primitive hdr.int_filho[0].id_switch = var_swid
+[15:35:34.271] [bmv2] [T] [thread 4805] [42.0] [cxt 0] basic.p4(161) Primitive hdr.int_filho[0].porta_entrada = standard_metadata.ingress_port
+[15:35:34.271] [bmv2] [T] [thread 4805] [42.0] [cxt 0] basic.p4(162) Primitive hdr.int_filho[0].porta_saida = standard_metadata.egress_spec
+[15:35:34.271] [bmv2] [T] [thread 4805] [42.0] [cxt 0] basic.p4(163) Primitive hdr.int_filho[0].timestamp = standard_metadata.ingress_global_timestamp
+[15:35:34.271] [bmv2] [T] [thread 4805] [42.0] [cxt 0] basic.p4(164) Primitive hdr.int_filho[0].padding = 0
+[15:35:34.271] [bmv2] [T] [thread 4805] [42.0] [cxt 0] basic.p4(179) Condition "hdr.ipv4.isValid()" (node_6) is false
+[15:35:34.271] [bmv2] [D] [thread 4805] [42.0] [cxt 0] Pipeline 'ingress': end
+[15:35:34.271] [bmv2] [D] [thread 4805] [42.0] [cxt 0] Egress port is 0
+[15:35:34.272] [bmv2] [D] [thread 4806] [42.0] [cxt 0] Pipeline 'egress': start
+[15:35:34.272] [bmv2] [D] [thread 4806] [42.0] [cxt 0] Pipeline 'egress': end
+[15:35:34.272] [bmv2] [D] [thread 4806] [42.0] [cxt 0] Deparser 'deparser': start
+[15:35:34.272] [bmv2] [T] [thread 4806] [42.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[15:35:34.272] [bmv2] [D] [thread 4806] [42.0] [cxt 0] Deparsing header 'ethernet'
+[15:35:34.272] [bmv2] [D] [thread 4806] [42.0] [cxt 0] Deparsing header 'int_pai'
+[15:35:34.272] [bmv2] [D] [thread 4806] [42.0] [cxt 0] Deparsing header 'int_filho[0]'
+[15:35:34.272] [bmv2] [D] [thread 4806] [42.0] [cxt 0] Deparser 'deparser': end
+[15:35:34.273] [bmv2] [D] [thread 4810] [42.0] [cxt 0] Transmitting packet of size 93 out of port 0
+[15:36:45.930] [bmv2] [D] [thread 4805] [43.0] [cxt 0] Processing packet received on port 2
+[15:36:45.931] [bmv2] [D] [thread 4805] [43.0] [cxt 0] Parser 'parser': start
+[15:36:45.931] [bmv2] [D] [thread 4805] [43.0] [cxt 0] Parser 'parser' entering state 'start'
+[15:36:45.931] [bmv2] [D] [thread 4805] [43.0] [cxt 0] Extracting header 'ethernet'
+[15:36:45.931] [bmv2] [D] [thread 4805] [43.0] [cxt 0] Parser state 'start': key is 86dd
+[15:36:45.932] [bmv2] [T] [thread 4805] [43.0] [cxt 0] Bytes parsed: 14
+[15:36:45.932] [bmv2] [D] [thread 4805] [43.0] [cxt 0] Parser 'parser': end
+[15:36:45.932] [bmv2] [D] [thread 4805] [43.0] [cxt 0] Pipeline 'ingress': start
+[15:36:45.932] [bmv2] [T] [thread 4805] [43.0] [cxt 0] basic.p4(168) Condition "hdr.int_pai.isValid()" (node_2) is false
+[15:36:45.932] [bmv2] [T] [thread 4805] [43.0] [cxt 0] Applying table 'tbl_basic169'
+[15:36:45.932] [bmv2] [D] [thread 4805] [43.0] [cxt 0] Looking up key:
+
+[15:36:45.932] [bmv2] [D] [thread 4805] [43.0] [cxt 0] Table 'tbl_basic169': miss
+[15:36:45.933] [bmv2] [D] [thread 4805] [43.0] [cxt 0] Action entry is basic169 - 
+[15:36:45.933] [bmv2] [T] [thread 4805] [43.0] [cxt 0] Action basic169
+[15:36:45.933] [bmv2] [T] [thread 4805] [43.0] [cxt 0] basic.p4(169) Primitive hdr.int_pai.setValid()
+[15:36:45.933] [bmv2] [T] [thread 4805] [43.0] [cxt 0] basic.p4(170) Primitive hdr.int_pai.tamanho_filho = 13
+[15:36:45.934] [bmv2] [T] [thread 4805] [43.0] [cxt 0] basic.p4(171) Primitive hdr.int_pai.quantidade_filhos = 0
+[15:36:45.934] [bmv2] [T] [thread 4805] [43.0] [cxt 0] basic.p4(6) Primitive 0x800; ...
+[15:36:45.934] [bmv2] [T] [thread 4805] [43.0] [cxt 0] basic.p4(5) Primitive 0x1212; ...
+[15:36:45.934] [bmv2] [T] [thread 4805] [43.0] [cxt 0] Applying table 'tbl_add_int_filho_0'
+[15:36:45.934] [bmv2] [D] [thread 4805] [43.0] [cxt 0] Looking up key:
+
+[15:36:45.934] [bmv2] [D] [thread 4805] [43.0] [cxt 0] Table 'tbl_add_int_filho_0': miss
+[15:36:45.934] [bmv2] [D] [thread 4805] [43.0] [cxt 0] Action entry is MyIngress.add_int_filho - 
+[15:36:45.934] [bmv2] [T] [thread 4805] [43.0] [cxt 0] Action MyIngress.add_int_filho
+[15:36:45.934] [bmv2] [T] [thread 4805] [43.0] [cxt 0] basic.p4(154) Primitive swid.read(var_swid, 0)
+[15:36:45.934] [bmv2] [T] [thread 4805] [43.0] [cxt 0] Read register 'MyIngress.swid' at index 0 read value 0
+[15:36:45.934] [bmv2] [T] [thread 4805] [43.0] [cxt 0] basic.p4(155) Primitive hdr.int_pai.quantidade_filhos = hdr.int_pai.quantidade_filhos + 1
+[15:36:45.934] [bmv2] [T] [thread 4805] [43.0] [cxt 0] basic.p4(158) Primitive hdr.int_filho.push_front(1)
+[15:36:45.934] [bmv2] [T] [thread 4805] [43.0] [cxt 0] basic.p4(159) Primitive hdr.int_filho[0].setValid()
+[15:36:45.934] [bmv2] [T] [thread 4805] [43.0] [cxt 0] basic.p4(160) Primitive hdr.int_filho[0].id_switch = var_swid
+[15:36:45.934] [bmv2] [T] [thread 4805] [43.0] [cxt 0] basic.p4(161) Primitive hdr.int_filho[0].porta_entrada = standard_metadata.ingress_port
+[15:36:45.935] [bmv2] [T] [thread 4805] [43.0] [cxt 0] basic.p4(162) Primitive hdr.int_filho[0].porta_saida = standard_metadata.egress_spec
+[15:36:45.935] [bmv2] [T] [thread 4805] [43.0] [cxt 0] basic.p4(163) Primitive hdr.int_filho[0].timestamp = standard_metadata.ingress_global_timestamp
+[15:36:45.935] [bmv2] [T] [thread 4805] [43.0] [cxt 0] basic.p4(164) Primitive hdr.int_filho[0].padding = 0
+[15:36:45.935] [bmv2] [T] [thread 4805] [43.0] [cxt 0] basic.p4(179) Condition "hdr.ipv4.isValid()" (node_6) is false
+[15:36:45.935] [bmv2] [D] [thread 4805] [43.0] [cxt 0] Pipeline 'ingress': end
+[15:36:45.935] [bmv2] [D] [thread 4805] [43.0] [cxt 0] Egress port is 0
+[15:36:45.935] [bmv2] [D] [thread 4806] [43.0] [cxt 0] Pipeline 'egress': start
+[15:36:45.935] [bmv2] [D] [thread 4806] [43.0] [cxt 0] Pipeline 'egress': end
+[15:36:45.935] [bmv2] [D] [thread 4806] [43.0] [cxt 0] Deparser 'deparser': start
+[15:36:45.935] [bmv2] [T] [thread 4806] [43.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[15:36:45.935] [bmv2] [D] [thread 4806] [43.0] [cxt 0] Deparsing header 'ethernet'
+[15:36:45.935] [bmv2] [D] [thread 4806] [43.0] [cxt 0] Deparsing header 'int_pai'
+[15:36:45.935] [bmv2] [D] [thread 4806] [43.0] [cxt 0] Deparsing header 'int_filho[0]'
+[15:36:45.936] [bmv2] [D] [thread 4806] [43.0] [cxt 0] Deparser 'deparser': end
+[15:36:45.936] [bmv2] [D] [thread 4810] [43.0] [cxt 0] Transmitting packet of size 93 out of port 0
