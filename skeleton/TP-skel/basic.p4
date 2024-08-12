@@ -154,23 +154,27 @@ control MyIngress(inout headers hdr,
       swid.read(var_swid, 0);
       hdr.int_pai.quantidade_filhos = hdr.int_pai.quantidade_filhos + 1;
 
-      hdr.int_filho[9].setValid();
-      hdr.int_filho[9].id_switch = var_swid;
-      hdr.int_filho[9].porta_entrada = standard_metadata.ingress_port;
-      hdr.int_filho[9].porta_saida = standard_metadata.egress_spec;
-      hdr.int_filho[9].timestamp = standard_metadata.ingress_global_timestamp;         
-      hdr.int_filho[9].padding = 0;
+      //comando push_front()
+      hdr.int_filho.push_front(1);
+      hdr.int_filho[0].setValid();
+      hdr.int_filho[0].id_switch = var_swid;
+      hdr.int_filho[0].porta_entrada = standard_metadata.ingress_port;
+      hdr.int_filho[0].porta_saida = standard_metadata.egress_spec;
+      hdr.int_filho[0].timestamp = standard_metadata.ingress_global_timestamp;         
+      hdr.int_filho[0].padding = 0;
     }
 
     apply {
-      //if(!hdr.int_pai.isValid()){
-      //  hdr.int_pai.setValid();
-      //  hdr.int_pai.tamanho_filho = 13;
-      //  hdr.int_pai.quantidade_filhos = 0;
-      //  hdr.int_pai.prox_header = TYPE_IPV4;
-      //} else {
-      //  add_int_filho();
-      //}
+      if(!hdr.int_pai.isValid()){
+        hdr.int_pai.setValid();
+        hdr.int_pai.tamanho_filho = 13;
+        hdr.int_pai.quantidade_filhos = 0;
+        hdr.int_pai.prox_header = TYPE_IPV4;
+        hdr.ethernet.etherType = TYPE_INT;
+        add_int_filho();
+      } else {
+        add_int_filho();
+      }
 
       if (hdr.ipv4.isValid()) {            
         ipv4_lpm.apply();

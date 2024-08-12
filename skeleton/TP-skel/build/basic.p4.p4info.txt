@@ -56,6 +56,13 @@ actions {
     bitwidth: 9
   }
 }
+actions {
+  preamble {
+    id: 22849857
+    name: "MyIngress.add_int_filho"
+    alias: "add_int_filho"
+  }
+}
 registers {
   preamble {
     id: 381620997
