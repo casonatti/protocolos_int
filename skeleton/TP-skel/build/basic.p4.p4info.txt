@@ -58,6 +58,13 @@ actions {
 }
 actions {
   preamble {
+    id: 28385269
+    name: "MyIngress.add_int_primeiro_filho"
+    alias: "add_int_primeiro_filho"
+  }
+}
+actions {
+  preamble {
     id: 22849857
     name: "MyIngress.add_int_filho"
     alias: "add_int_filho"
@@ -65,9 +72,9 @@ actions {
 }
 registers {
   preamble {
-    id: 381620997
-    name: "MyIngress.swid"
-    alias: "swid"
+    id: 385489815
+    name: "MyIngress.reg_switch_id"
+    alias: "reg_switch_id"
   }
   type_spec {
     bitstring {

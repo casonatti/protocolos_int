@@ -52,14 +52,17 @@ class INT_Filho(Packet):
                      BitField("porta_saida",0, 9),
                      BitField("timeStamp",0, 48),
                      BitField("padding",0, 6),
+                     BitField("prox_header", 0, 16),
                     ]
+    
+    # def extract_padding(self, p):
+    #     return "", p
 
-class INT(Packet):
-    name = "INT packet"
-
+class INT_Pai(Packet):
+    name = "INT Pai"
     fields_desc=[ BitField("tamanho_filho", 0, 32),
                   BitField("quantidade_filhos", None, 32),
-                  BitField("prox_header", 0, 16),
+                  # BitField("prox_header", 0, 16),
                   PacketListField("plist", None, INT_Filho, count_from= lambda pkt:pkt.quantidade_filhos)]
 
 
@@ -74,7 +77,7 @@ class INT(Packet):
 def handle_pkt(pkt):
     
     # if TCP in pkt and pkt[TCP].dport == 1234:
-    # if INT in pkt and pkt[INT].prox_header != 1:
+    # if INT_Pai in pkt:
     # if pkt[INT].prox_header != 0:
     print("got a packet")
     pkt.show2()
@@ -88,9 +91,10 @@ def main():
     print("sniffing on %s" % iface)
     sys.stdout.flush()
 
-    bind_layers(Ether, INT, type = 0x1212)
-    bind_layers(INT, INT_Filho)
-    bind_layers(INT_Filho, IP)
+    bind_layers(Ether, INT_Pai, type = 0x1212)
+    bind_layers(INT_Pai, INT_Filho)
+    bind_layers(INT_Filho, INT_Filho, prox_header = 0x1213)
+    bind_layers(INT_Filho, IP, prox_header = 0x800)
 
     sniff(iface = iface,
           prn = lambda x: handle_pkt(x))

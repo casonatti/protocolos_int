@@ -3,6 +3,7 @@
 #include <v1model.p4>
 
 const bit<16> TYPE_INT  = 0x1212;
+const bit<16> TYPE_INT_FILHO = 0x1213;
 const bit<16> TYPE_IPV4 = 0x800;
 
 /*************************************************************************
@@ -22,7 +23,7 @@ header ethernet_t {
 header int_pai_t {
   bit<32> tamanho_filho;
   bit<32> quantidade_filhos;
-  bit<16> prox_header;
+  //bit<16> prox_header;
 }
 
 header int_filho_t {
@@ -31,6 +32,8 @@ header int_filho_t {
   bit<9> porta_saida;
   bit<48> timestamp;
   bit<6> padding; // 32 + 9 + 9 + 48 + 6 = 104 => 13 bytes
+
+  bit<16> prox_header;
 }
 
 header ipv4_t {
@@ -120,9 +123,7 @@ control MyIngress(inout headers hdr,
                   inout metadata meta,
                   inout standard_metadata_t standard_metadata) {
     
-    // Estudar essa parte
-    register<bit<32>>(1) swid;
-
+    register<bit<32>>(1) reg_switch_id;
 
     action drop() {
       mark_to_drop(standard_metadata);
@@ -149,19 +150,36 @@ control MyIngress(inout headers hdr,
         default_action = drop();
     }
 
-    action add_int_filho(){
-      bit<32> var_swid;
-      swid.read(var_swid, 0);
-      hdr.int_pai.quantidade_filhos = hdr.int_pai.quantidade_filhos + 1;
+    action add_int_primeiro_filho(){
+      bit<32> var_switch_id;
+      reg_switch_id.read(var_switch_id, 0);
 
-      //comando push_front()
-      hdr.int_filho.push_front(1);
+      hdr.int_pai.quantidade_filhos = hdr.int_pai.quantidade_filhos + 1;
+      
       hdr.int_filho[0].setValid();
-      hdr.int_filho[0].id_switch = var_swid;
+      hdr.int_filho[0].id_switch = var_switch_id;
       hdr.int_filho[0].porta_entrada = standard_metadata.ingress_port;
       hdr.int_filho[0].porta_saida = standard_metadata.egress_spec;
       hdr.int_filho[0].timestamp = standard_metadata.ingress_global_timestamp;         
       hdr.int_filho[0].padding = 0;
+      hdr.int_filho[0].prox_header = TYPE_INT_FILHO;
+    }
+
+    action add_int_filho(){
+      bit<32> var_switch_id;
+      reg_switch_id.read(var_switch_id, 0);
+
+      hdr.int_pai.quantidade_filhos = hdr.int_pai.quantidade_filhos + 1;
+      
+      hdr.int_filho.push_front(1);
+      hdr.int_filho[0].setValid();
+      hdr.int_filho[0].id_switch = var_switch_id;
+      hdr.int_filho[0].porta_entrada = standard_metadata.ingress_port;
+      hdr.int_filho[0].porta_saida = standard_metadata.egress_spec;
+      hdr.int_filho[0].timestamp = standard_metadata.ingress_global_timestamp;         
+      hdr.int_filho[0].padding = 0;
+      hdr.int_filho[0].prox_header = TYPE_INT_FILHO;
+      hdr.int_filho[1].prox_header = TYPE_IPV4;
     }
 
     apply {
@@ -169,9 +187,9 @@ control MyIngress(inout headers hdr,
         hdr.int_pai.setValid();
         hdr.int_pai.tamanho_filho = 13;
         hdr.int_pai.quantidade_filhos = 0;
-        hdr.int_pai.prox_header = TYPE_IPV4;
+        //hdr.int_pai.prox_header = TYPE_IPV4;
         hdr.ethernet.etherType = TYPE_INT;
-        add_int_filho();
+        add_int_primeiro_filho();
       } else {
         add_int_filho();
       }
