@@ -94,7 +94,7 @@ def main():
     bind_layers(Ether, INT_Pai, type = 0x1212)
     bind_layers(INT_Pai, INT_Filho)
     bind_layers(INT_Filho, INT_Filho, prox_header = 0x1213)
-    bind_layers(INT_Filho, IP, prox_header = 0x800)
+    bind_layers(INT_Filho, IP)
 
     sniff(iface = iface,
           prn = lambda x: handle_pkt(x))

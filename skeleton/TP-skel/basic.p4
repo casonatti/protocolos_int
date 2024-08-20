@@ -31,8 +31,7 @@ header int_filho_t {
   bit<9> porta_entrada;
   bit<9> porta_saida;
   bit<48> timestamp;
-  bit<6> padding; // 32 + 9 + 9 + 48 + 6 = 104 => 13 bytes
-
+  bit<6> padding; // 32 + 9 + 9 + 48 + 6 + 16 = 120 => 15 bytes
   bit<16> prox_header;
 }
 
@@ -162,7 +161,7 @@ control MyIngress(inout headers hdr,
       hdr.int_filho[0].porta_saida = standard_metadata.egress_spec;
       hdr.int_filho[0].timestamp = standard_metadata.ingress_global_timestamp;         
       hdr.int_filho[0].padding = 0;
-      hdr.int_filho[0].prox_header = TYPE_INT_FILHO;
+      hdr.int_filho[0].prox_header = TYPE_IPV4;
     }
 
     action add_int_filho(){
@@ -170,6 +169,7 @@ control MyIngress(inout headers hdr,
       reg_switch_id.read(var_switch_id, 0);
 
       hdr.int_pai.quantidade_filhos = hdr.int_pai.quantidade_filhos + 1;
+      hdr.int_pai.tamanho_filho = hdr.int_pai.tamanho_filho + 15;
       
       hdr.int_filho.push_front(1);
       hdr.int_filho[0].setValid();
@@ -179,13 +179,16 @@ control MyIngress(inout headers hdr,
       hdr.int_filho[0].timestamp = standard_metadata.ingress_global_timestamp;         
       hdr.int_filho[0].padding = 0;
       hdr.int_filho[0].prox_header = TYPE_INT_FILHO;
-      hdr.int_filho[1].prox_header = TYPE_IPV4;
     }
 
     apply {
+      if (hdr.ipv4.isValid()) {            
+        ipv4_lpm.apply();
+      }
+
       if(!hdr.int_pai.isValid()){
         hdr.int_pai.setValid();
-        hdr.int_pai.tamanho_filho = 13;
+        hdr.int_pai.tamanho_filho = 15;
         hdr.int_pai.quantidade_filhos = 0;
         //hdr.int_pai.prox_header = TYPE_IPV4;
         hdr.ethernet.etherType = TYPE_INT;
@@ -194,9 +197,6 @@ control MyIngress(inout headers hdr,
         add_int_filho();
       }
 
-      if (hdr.ipv4.isValid()) {            
-        ipv4_lpm.apply();
-      }
     }
 }
 
